@@ -1,0 +1,21 @@
+2024-01-05 13:39:48,351  com.Smyttenapplication.testcase.SmyttenBaseclass home page is displayed  
+2024-01-05 14:14:25,734  com.Smyttenapplication.testcase.SmyttenBaseclass logintest case started  
+2024-01-05 14:14:26,733  com.Smyttenapplication.testcase.SmyttenBaseclass clicked on login button  
+2024-01-05 14:14:28,002  com.Smyttenapplication.testcase.SmyttenBaseclass clicked on clickonsignin button  
+2024-01-05 14:14:31,254  com.Smyttenapplication.testcase.SmyttenBaseclass clicked on clickongmailselect button  
+2024-01-05 14:14:31,255  com.Smyttenapplication.testcase.SmyttenBaseclass logintest test case passed   
+2024-01-05 14:14:46,005  com.Smyttenapplication.testcase.SmyttenBaseclass Totalingproductpriceincarttest case started  
+2024-01-05 14:14:51,456  com.Smyttenapplication.testcase.SmyttenBaseclass clicked on clickoncart  
+2024-01-05 14:15:03,323  com.Smyttenapplication.testcase.SmyttenBaseclass made sure cart is empty  
+2024-01-05 14:15:05,162  com.Smyttenapplication.testcase.SmyttenBaseclass clicked on clickonmen  
+2024-01-05 14:15:13,068  com.Smyttenapplication.testcase.SmyttenBaseclass clicked on selectingpetcare   
+2024-01-05 14:15:26,774  com.Smyttenapplication.testcase.SmyttenBaseclass clicked on addingelementtocart  
+2024-01-05 14:15:28,447  com.Smyttenapplication.testcase.SmyttenBaseclass clicked on  cliconeleentincart  
+2024-01-05 14:15:31,476  com.Smyttenapplication.testcase.SmyttenBaseclass total price is validated  
+2024-01-05 14:15:31,478  com.Smyttenapplication.testcase.SmyttenBaseclass Totalingproductpriceincarttest case passed  
+2024-01-05 14:15:44,518  com.Smyttenapplication.testcase.SmyttenBaseclass gesturestest case started  
+2024-01-05 14:16:19,501  com.Smyttenapplication.testcase.SmyttenBaseclass scroll_swipe gesture is success  
+2024-01-05 14:16:31,352  com.Smyttenapplication.testcase.SmyttenBaseclass doubletap gesture is success  
+2024-01-05 14:16:45,412  com.Smyttenapplication.testcase.SmyttenBaseclass clipboardtext gesture is success  
+2024-01-05 14:16:51,813  com.Smyttenapplication.testcase.SmyttenBaseclass longpress is success   
+2024-01-05 14:16:51,813  com.Smyttenapplication.testcase.SmyttenBaseclass gesturestest test case passed   
