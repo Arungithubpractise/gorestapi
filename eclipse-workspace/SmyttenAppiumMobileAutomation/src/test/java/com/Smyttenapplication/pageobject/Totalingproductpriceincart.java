@@ -28,7 +28,6 @@ public class Totalingproductpriceincart {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
-	
 
 	@AndroidFindBy(xpath = "//android.widget.FrameLayout[@content-desc=\"Cart\"]/android.widget.FrameLayout/android.widget.ImageView")
 	public WebElement cart;

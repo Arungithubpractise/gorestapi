@@ -1,49 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results retried="1" ignored="0" total="4" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-05T14:14:14 IST" name="Suite" finished-at="2024-01-05T14:16:52 IST" duration-ms="158113">
+  <suite started-at="2024-01-27T18:57:26 IST" name="Suite" finished-at="2024-01-27T19:01:35 IST" duration-ms="248893">
     <groups>
     </groups>
-    <test started-at="2024-01-05T14:14:14 IST" name="Test" finished-at="2024-01-05T14:16:52 IST" duration-ms="158113">
+    <test started-at="2024-01-27T18:57:26 IST" name="Test" finished-at="2024-01-27T19:01:35 IST" duration-ms="248893">
       <class name="com.Smyttenapplication.testcase.Totalingproductpriceincarttest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.Smyttenapplication.testcase.Totalingproductpriceincarttest@7bba5817]" started-at="2024-01-05T14:14:31 IST" name="setup" finished-at="2024-01-05T14:14:40 IST" duration-ms="8570" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.Smyttenapplication.testcase.Totalingproductpriceincarttest@7bba5817]" started-at="2024-01-27T18:57:42 IST" name="setup" finished-at="2024-01-27T18:57:51 IST" duration-ms="8670" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validatepropricewithtotalprice()[pri:0, instance:com.Smyttenapplication.testcase.Totalingproductpriceincarttest@7bba5817]" started-at="2024-01-05T14:14:40 IST" name="validatepropricewithtotalprice" finished-at="2024-01-05T14:15:31 IST" duration-ms="51038" status="PASS">
+        <test-method signature="validatepropricewithtotalprice()[pri:0, instance:com.Smyttenapplication.testcase.Totalingproductpriceincarttest@7bba5817]" started-at="2024-01-27T18:57:51 IST" name="validatepropricewithtotalprice" finished-at="2024-01-27T18:59:00 IST" duration-ms="68477" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validatepropricewithtotalprice -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Smyttenapplication.testcase.Totalingproductpriceincarttest@7bba5817]" started-at="2024-01-05T14:15:31 IST" name="teardown" finished-at="2024-01-05T14:15:32 IST" duration-ms="727" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Smyttenapplication.testcase.Totalingproductpriceincarttest@7bba5817]" started-at="2024-01-27T18:59:00 IST" name="teardown" finished-at="2024-01-27T18:59:00 IST" duration-ms="533" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.Smyttenapplication.testcase.Totalingproductpriceincarttest -->
       <class name="com.Smyttenapplication.testcase.Logintest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.Smyttenapplication.testcase.Logintest@f78a47e]" started-at="2024-01-05T14:14:14 IST" name="setup" finished-at="2024-01-05T14:14:24 IST" duration-ms="9588" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.Smyttenapplication.testcase.Logintest@f78a47e]" started-at="2024-01-27T18:57:27 IST" name="setup" finished-at="2024-01-27T18:57:36 IST" duration-ms="9801" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="logintest()[pri:0, instance:com.Smyttenapplication.testcase.Logintest@f78a47e]" started-at="2024-01-05T14:14:24 IST" name="logintest" finished-at="2024-01-05T14:14:31 IST" duration-ms="6942" status="PASS">
+        <test-method signature="logintest()[pri:0, instance:com.Smyttenapplication.testcase.Logintest@f78a47e]" started-at="2024-01-27T18:57:36 IST" name="logintest" finished-at="2024-01-27T18:57:42 IST" duration-ms="5472" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Smyttenapplication.testcase.Logintest@f78a47e]" started-at="2024-01-05T14:14:31 IST" name="teardown" finished-at="2024-01-05T14:14:31 IST" duration-ms="598" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Smyttenapplication.testcase.Logintest@f78a47e]" started-at="2024-01-27T18:57:42 IST" name="teardown" finished-at="2024-01-27T18:57:42 IST" duration-ms="505" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.Smyttenapplication.testcase.Logintest -->
       <class name="com.Smyttenapplication.testcase.gesturestest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.Smyttenapplication.testcase.gesturestest@742ff096]" started-at="2024-01-05T14:15:32 IST" name="setup" finished-at="2024-01-05T14:15:39 IST" duration-ms="7581" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.Smyttenapplication.testcase.gesturestest@742ff096]" started-at="2024-01-27T18:59:00 IST" name="setup" finished-at="2024-01-27T18:59:08 IST" duration-ms="7658" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="swipe_scroll()[pri:0, instance:com.Smyttenapplication.testcase.gesturestest@742ff096]" started-at="2024-01-05T14:15:39 IST" name="swipe_scroll" finished-at="2024-01-05T14:16:51 IST" duration-ms="72024" status="PASS">
+        <test-method retried="true" signature="swipe_scroll()[pri:0, instance:com.Smyttenapplication.testcase.gesturestest@742ff096]" started-at="2024-01-27T18:59:08 IST" name="swipe_scroll" finished-at="2024-01-27T18:59:59 IST" duration-ms="51331" status="SKIP">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [6de7fd26-bfd7-4ae0-8bed-5f0986eec613, getElementRect {id=00000000-0000-0519-ffff-ffff00000449}]
+Capabilities {appium:app: C:\Users\arunn\eclipse-work..., appium:appPackage: com.app.smytten, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\arunn\eclipse-work..., automationName: UiAutomator2, deviceName: Pixel 4 XL API 28, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 9, appium:statBarHeight: 172, appium:takesScreenshot: true, appium:viewportRect: {height: 2529, left: 0, top: 172, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (6de7fd26-bfd7-4ae0-8bed-5f0986eec613)] -> id: com.app.smytten:id/image]
+Session ID: 6de7fd26-bfd7-4ae0-8bed-5f0986eec613]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [6de7fd26-bfd7-4ae0-8bed-5f0986eec613, getElementRect {id=00000000-0000-0519-ffff-ffff00000449}]
+Capabilities {appium:app: C:\Users\arunn\eclipse-work..., appium:appPackage: com.app.smytten, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\arunn\eclipse-work..., automationName: UiAutomator2, deviceName: Pixel 4 XL API 28, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 9, appium:statBarHeight: 172, appium:takesScreenshot: true, appium:viewportRect: {height: 2529, left: 0, top: 172, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (6de7fd26-bfd7-4ae0-8bed-5f0986eec613)] -> id: com.app.smytten:id/image]
+Session ID: 6de7fd26-bfd7-4ae0-8bed-5f0986eec613
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.getLocation(RemoteWebElement.java:298)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$2kJWxzZr.getLocation(Unknown Source)
+at com.Smyttenapplication.utility.Reusemethods.Doubletaponelement(Reusemethods.java:39)
+at com.Smyttenapplication.pageobject.gesturespage.doubletap(gesturespage.java:139)
+at com.Smyttenapplication.testcase.gesturestest.swipe_scroll(gesturestest.java:29)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- swipe_scroll -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Smyttenapplication.testcase.gesturestest@742ff096]" started-at="2024-01-05T14:16:51 IST" name="teardown" finished-at="2024-01-05T14:16:52 IST" duration-ms="624" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Smyttenapplication.testcase.gesturestest@742ff096]" started-at="2024-01-27T18:59:59 IST" name="teardown" finished-at="2024-01-27T19:00:00 IST" duration-ms="741" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.Smyttenapplication.testcase.gesturestest@742ff096]" started-at="2024-01-27T19:00:00 IST" name="setup" finished-at="2024-01-27T19:00:07 IST" duration-ms="7511" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="swipe_scroll()[pri:0, instance:com.Smyttenapplication.testcase.gesturestest@742ff096]" started-at="2024-01-27T19:00:07 IST" name="swipe_scroll" finished-at="2024-01-27T19:01:34 IST" duration-ms="86473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- swipe_scroll -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.Smyttenapplication.testcase.gesturestest@742ff096]" started-at="2024-01-27T19:01:34 IST" name="teardown" finished-at="2024-01-27T19:01:35 IST" duration-ms="1339" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

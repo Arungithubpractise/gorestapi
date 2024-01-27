@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jan 05 14:14:14 IST 2024</td>
+<td>Started on:</td><td>Sat Jan 27 18:57:26 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>158 seconds (158113 ms)</td>
+<tr><td>Total time:</td><td>248 seconds (248893 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,20 +76,115 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.Smyttenapplication.testcase.Logintest.logintest()'><b>logintest</b><br>Test class: com.Smyttenapplication.testcase.Logintest</td>
+<td></td>
+<td>5</td>
+<td>com.Smyttenapplication.testcase.Logintest@f78a47e</td></tr>
+<tr>
 <td title='com.Smyttenapplication.testcase.Totalingproductpriceincarttest.validatepropricewithtotalprice()'><b>validatepropricewithtotalprice</b><br>Test class: com.Smyttenapplication.testcase.Totalingproductpriceincarttest</td>
 <td></td>
-<td>51</td>
+<td>68</td>
 <td>com.Smyttenapplication.testcase.Totalingproductpriceincarttest@7bba5817</td></tr>
 <tr>
 <td title='com.Smyttenapplication.testcase.gesturestest.swipe_scroll()'><b>swipe_scroll</b><br>Test class: com.Smyttenapplication.testcase.gesturestest</td>
 <td></td>
-<td>72</td>
+<td>86</td>
 <td>com.Smyttenapplication.testcase.gesturestest@742ff096</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='com.Smyttenapplication.testcase.Logintest.logintest()'><b>logintest</b><br>Test class: com.Smyttenapplication.testcase.Logintest</td>
-<td></td>
-<td>6</td>
-<td>com.Smyttenapplication.testcase.Logintest@f78a47e</td></tr>
+<td title='com.Smyttenapplication.testcase.gesturestest.swipe_scroll()'><b>swipe_scroll</b><br>Test class: com.Smyttenapplication.testcase.gesturestest</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [6de7fd26-bfd7-4ae0-8bed-5f0986eec613, getElementRect {id=00000000-0000-0519-ffff-ffff00000449}]
+Capabilities {appium:app: C:\Users\arunn\eclipse-work..., appium:appPackage: com.app.smytten, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\arunn\eclipse-work..., automationName: UiAutomator2, deviceName: Pixel 4 XL API 28, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 9, appium:statBarHeight: 172, appium:takesScreenshot: true, appium:viewportRect: {height: 2529, left: 0, top: 172, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (6de7fd26-bfd7-4ae0-8bed-5f0986eec613)] -&gt; id: com.app.smytten:id/image]
+Session ID: 6de7fd26-bfd7-4ae0-8bed-5f0986eec613
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.getLocation(RemoteWebElement.java:298)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$2kJWxzZr.getLocation(Unknown Source)
+	at com.Smyttenapplication.utility.Reusemethods.Doubletaponelement(Reusemethods.java:39)
+	at com.Smyttenapplication.pageobject.gesturespage.doubletap(gesturespage.java:139)
+	at com.Smyttenapplication.testcase.gesturestest.swipe_scroll(gesturestest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace125992315", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace125992315'><pre>org.openqa.selenium.StaleElementReferenceException: androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [6de7fd26-bfd7-4ae0-8bed-5f0986eec613, getElementRect {id=00000000-0000-0519-ffff-ffff00000449}]
+Capabilities {appium:app: C:\Users\arunn\eclipse-work..., appium:appPackage: com.app.smytten, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\arunn\eclipse-work..., automationName: UiAutomator2, deviceName: Pixel 4 XL API 28, platformName: ANDROID}, appium:deviceApiLevel: 28, appium:deviceManufacturer: Google, appium:deviceModel: AOSP on IA Emulator, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 9, appium:statBarHeight: 172, appium:takesScreenshot: true, appium:viewportRect: {height: 2529, left: 0, top: 172, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (6de7fd26-bfd7-4ae0-8bed-5f0986eec613)] -&gt; id: com.app.smytten:id/image]
+Session ID: 6de7fd26-bfd7-4ae0-8bed-5f0986eec613
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.getLocation(RemoteWebElement.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$2kJWxzZr.getLocation(Unknown Source)
+	at com.Smyttenapplication.utility.Reusemethods.Doubletaponelement(Reusemethods.java:39)
+	at com.Smyttenapplication.pageobject.gesturespage.doubletap(gesturespage.java:139)
+	at com.Smyttenapplication.testcase.gesturestest.swipe_scroll(gesturestest.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>51</td>
+<td>com.Smyttenapplication.testcase.gesturestest@742ff096</td></tr>
 </table><p>
 </body>
 </html>

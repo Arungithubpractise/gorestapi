@@ -12,9 +12,9 @@
   	
   	 	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
     <classes>
-    	<class name="com.Smyttenapplication.testcase.Logintest"/>
-        <class name="com.Smyttenapplication.testcase.Totalingproductpriceincarttest"/>	
-  	 	<class name="com.Smyttenapplication.testcase.gesturestest"/>      
+    	 <class name="com.Smyttenapplication.testcase.Logintest"/> 
+      <class name="com.Smyttenapplication.testcase.Totalingproductpriceincarttest"/>	 
+  	 	  <class name="com.Smyttenapplication.testcase.gesturestest"/>      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

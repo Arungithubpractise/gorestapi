@@ -12,7 +12,7 @@ public class gesturestest extends SmyttenBaseclass {
 	gesturespage rest;
 	
 	@Test
-	public void swipe_scroll()  {
+	public void swipe_scroll() throws InterruptedException  {
 		
 		 lp = new Loginpage(driver);
 		 rest = new gesturespage(driver);
@@ -34,6 +34,9 @@ public class gesturestest extends SmyttenBaseclass {
 		
 		rest.longpress();
 		log.info("longpress is success ");
+		
+		rest.screenrotate();
+		log.info("screenrotate success ");
 		
 		log.info("gesturestest test case passed ");
 		

@@ -40,20 +40,18 @@ public class gesturespage {
 	@AndroidFindBy(xpath  = "//android.widget.TextView[@text = 'Shop']")
 	public WebElement Shop;
 	
-	@AndroidFindBy(xpath  = "//android.widget.TextView[@text = '𝐒𝐇𝐎𝐏 𝐍𝐎𝐖']")
-	public WebElement shopnow;
+	//@AndroidFindBy(xpath  = "//android.widget.TextView[@text = '𝐒𝐇𝐎𝐏 𝐍𝐎𝐖']")
+	//public WebElement shopnow;
 	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text = '𝐔𝐏 𝐓𝐎 𝟓𝟖% 𝐎𝐅𝐅']")
-	public WebElement upto58;
+	@AndroidFindBy(xpath = "//*[@resource-id = 'com.app.smytten:id/ll_root_row_trial_featured']")
+	public WebElement exploreswipeelement;
 	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@text = '𝐔𝐏 𝐓𝐎 𝟏𝟔% 𝐎𝐅𝐅']")
-	public WebElement upto16;
-	
+	@AndroidFindBy(xpath = "(//*[@resource-id = 'com.app.smytten:id/ll_root_row_trial_featured'])[2]")
+	public WebElement exploreclickelement;
 	
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text = 'Wood Cold Pressed Sunflower Cooking Oil']")
 	public WebElement oil;
 	
-
 	@AndroidFindBy(id = "com.app.smytten:id/image")
 	public WebElement image;
 	
@@ -70,21 +68,29 @@ public class gesturespage {
 	@AndroidFindBy(xpath = "//android.widget.TextView[@text = 'Men Deserve']")
 	public WebElement MenDeserve;
 	
-
-	public void scroll_swipe_taponelement()
+	@AndroidFindBy(xpath  = "//android.widget.TextView[@text = 'Menu']")
+	public WebElement menu;
+	
+	@AndroidFindBy(accessibility  = "Messages")
+	public WebElement Messages;
+	
+	public void scroll_swipe_taponelement() throws InterruptedException
 	{
 		reuse = new Reusemethods();
 		reuse.taponelement(Shop);
 		
 		//scroll
 		
+		Thread.sleep(3000);
+		
 		driver.findElement(AppiumBy.androidUIAutomator(
-				"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"𝐄𝐗𝐏𝐋𝐎𝐑𝐄\").instance(0))"));
+				"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"𝐓𝐎𝐏 𝐏𝐈𝐂𝐊𝐒\").instance(0))"));
 		
 		//swipe
 		
+		
 		((JavascriptExecutor) driver). executeScript("mobile: swipeGesture", 
-				ImmutableMap.of("elementId", ((RemoteWebElement) upto58). getId(),
+				ImmutableMap.of("elementId", ((RemoteWebElement) exploreswipeelement). getId(),
 		                         "direction", "left",
 		                         "percent", 0.75));
 		
@@ -116,7 +122,7 @@ public class gesturespage {
 	
 		
 		wait = new Webdrivewaitutils(driver);
-		wait.clickOnElement(upto16, Webdrivewaitutils.EXPLICIT_WAIT_BASIC_TIME);	
+		wait.clickOnElement(exploreclickelement, Webdrivewaitutils.EXPLICIT_WAIT_BASIC_TIME);	
 		
 
 	}
@@ -163,7 +169,7 @@ public class gesturespage {
 			driver.pressKey(new KeyEvent(AndroidKey.BACK));
 		}
 		
-		reuse.Longpress(Shop);                        //we can see Tool tip after long press
+		reuse.Longpress(menu);                        //we can see Tool tip after long press
 	}
 	
 
@@ -173,6 +179,9 @@ public class gesturespage {
 		{
 			driver.pressKey(new KeyEvent(AndroidKey.BACK));
 		}
+		
+		wait = new Webdrivewaitutils(driver);
+		wait.clickOnElement(Messages, Webdrivewaitutils.EXPLICIT_WAIT_BASIC_TIME);
 		
 		DeviceRotation landscape = new DeviceRotation(0,0,90);
 		driver.rotate(landscape);
@@ -185,22 +194,6 @@ public class gesturespage {
 	{
 		return new Point(location.getX()+ size.getWidth()/2, location.getY()+size.getHeight()/2);
 		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
+	}	
 	
 }
