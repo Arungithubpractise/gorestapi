@@ -1,15 +1,34 @@
 package Stepdefinitions;
 
-import io.cucumber.java.en.*;
+import static io.restassured.RestAssured.given;
 
-public class Usercreation {
+import java.io.IOException;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
+import utils.Utils;  
+
+
+
+public class Usercreation extends Utils {
+	
+	RequestSpecification res;
+	ResponseSpecification resspec;
+	Response response;
+	
+	static String place_id;
 	
 	@Given("create a user")
-	public void create_a_user() {
+	public void create_a_user() throws IOException {
 		
+		res=given().spec(requestSpecification());
+				//.body(data.addPlacePayLoad(name,language,address));
 		
-		
-	   
+
 	}
 
 	@When("user is created with {string} http request")
