@@ -7,16 +7,14 @@ import pojo.user;
 
 public class Testdatabuild {
 	
-	Faker faker;
-	user use;
+	static Faker faker;
+	static user use;
 	
-	public void setupdata()
+	public static user setupdata()
 	{
-		faker = new Faker();
+		/*faker = new Faker();
 		use = new user();
-		
-		use.setId(0);
-		
+				
 		use.setId(faker.idNumber().hashCode()); 
 		use.setUsername(faker.name().username());
 		use.setFirstname(faker.name().firstName()); 
@@ -24,6 +22,22 @@ public class Testdatabuild {
 		use.setEmail(faker.internet().safeEmailAddress()); 
 		use.setPassword(faker.internet().password (5, 10)); 
 		use.setPhone(faker.phoneNumber().cellPhone());
+		return use;*/
+		
+		
+		use = new user();
+		
+		use.setId(1);
+		use.setUsername("govind kumar");
+		use.setFirstname("govind");
+		use.setLastname("kumar");
+		use.setEmail("govind@gmail.com");
+		use.setPassword("govind123");
+		use.setPhone("84562146");
+		use.setUserstatus(0); 
+		
+		return use;
+		
 	}
 
 }
