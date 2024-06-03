@@ -33,24 +33,22 @@ public class stepdefinition extends Utils {
 	@Given("create a user")
 	public void create_a_user() throws IOException 
 	{
-		/*res=given().spec(requestSpecification())
-				.body(Testdatabuild.setupdata());*/
+		res=given().spec(requestSpecification())
+				.body(Testdatabuild.setupdata());
 		
-		RestAssured.baseURI = "https://gorest.co.in";
-		RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://gorest.co.in").setContentType(ContentType.JSON).setAccept(ContentType.JSON).build();
+		//RestAssured.baseURI = "https://gorest.co.in";
+		//RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://gorest.co.in").setContentType(ContentType.JSON).setAccept(ContentType.JSON).build();
 		
-		ResponseSpecBuilder v = new ResponseSpecBuilder();
-		res =given().spec(req).body(Testdatabuild.setupdata());
+		 resspec = new ResponseSpecBuilder().expectStatusCode(201).expectContentType(ContentType.JSON).build();
+		res =given().log().all().spec(req).body(Testdatabuild.setupdata());
 				
 	}
-	
-   
 	
 	@When("user is created with {string} http request")
 	public void user_is_created_with_http_request(String method)
 	{
 		
-		response = res.when().post("/public/v2/users/1").then().spec(resspec).extract().response();
+		response = res.when().post("/public/v2/users").then().log().all().spec(resspec).extract().response();
 		
 		/*GorestAPIResources resourceAPI=GorestAPIResources.valueOf(resource);
 		System.out.println(resourceAPI.getResource());
@@ -67,7 +65,7 @@ public class stepdefinition extends Utils {
 	@Then("check data is created with status code {int} created")
 	public void check_data_is_created_with_status_code_created(Integer int1) {
 		
-		assertEquals(response.getStatusCode(),201);
+	assertEquals(response.getStatusCode(),201);
 	    
 	}
 	

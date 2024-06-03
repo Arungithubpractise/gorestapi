@@ -1,170 +1,45 @@
 Request method:	POST
-Request URI:	https://gorest.co.in/public/v2/users/1
+Request URI:	https://gorest.co.in/public/v2/users
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Accept=*/*
+Headers:		Authorization=c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292
+				Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
     "id": 1,
-    "username": "govind kumar",
-    "firstname": "govind",
-    "lastname": "kumar",
+    "name": "govind kumar",
     "email": "govind@gmail.com",
-    "password": "govind123",
-    "phone": "84562146",
-    "userstatus": 0
+    "gender": "Male",
+    "status": "Active"
 }
-HTTP/1.1 404 Not Found
-Date: Fri, 31 May 2024 10:07:46 GMT
-Content-Type: text/html; charset=utf-8
-Transfer-Encoding: chunked
+HTTP/1.1 401 Unauthorized
+Date: Mon, 03 Jun 2024 12:35:12 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 35
 Connection: keep-alive
 Cache-Control: no-cache
-feature-policy: camera 'none'; gyroscope 'none'; microphone 'none'; usb 'none'; fullscreen 'self'
-link: </assets/application-6286ef85f8dd095e49957bfc5b0cba0b68df3592774b35d0494027d130601970.css>; rel=preload; as=style; nopush
 referrer-policy: strict-origin-when-cross-origin
 vary: Origin
 x-content-type-options: nosniff
 x-download-options: noopen
 x-frame-options: SAMEORIGIN
 x-permitted-cross-domain-policies: none
-x-request-id: a3e3d13b-941b-4a09-9d03-c57712cc85bb
-x-runtime: 0.009712
+x-request-id: e7fa5a7d-f0ec-4b2e-8cf1-6c2674c18b40
+x-runtime: 0.013267
 x-xss-protection: 0
 CF-Cache-Status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=bSsESJZnwDbi8n%2FtFd5MGwbhW3zjFSP6Di9OKiCPS9psConOjUt900eoAjiaz43Bf9qpz3mYSF2mi1xP7QuC1p%2BSylPml0CzFwNcJBHpicq57Ifr4lH0K6WF5AwMGXA%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=JNFx%2FTeVG0nHnd0LH%2BfztFFzSoTx0G%2Bk5vdbGurQD0Mh7qIG2IhmNIL%2BI8KJAQQ%2B%2FJ%2FU5NoBnihCKFpH7Um7e%2B0dpoPg5BFrL9u55dTT%2BJcyf6YXkcDFY1eGeL2MGaE%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 88c628a868bf179f-MAA
-Content-Encoding: gzip
+CF-RAY: 88dfb8bf8b3aa8fc-MAA
 alt-svc: h3=":443"; ma=86400
 
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-    <title>Page Not Found | GO REST</title>
-    <link rel="stylesheet" href="/assets/application-6286ef85f8dd095e49957bfc5b0cba0b68df3592774b35d0494027d130601970.css" media="all" data-turbolinks-track="reload"/>
-    <script defer="defer" src="/packs/js/application-194ed409298f13f197d2.js" data-turbolinks-track="reload"/>
-    <script async="true" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4930099895671899"/>
-    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-7KR6VNWHWS"/>
-    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-7KR6VNWHWS');</script>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <div class="container">
-        <a shape="rect" class="navbar-brand" href="/">
-          <i class="fas fa-exchange-alt"/>
- Go REST        </a>
-        <button type="button" class="navbar-toggler" aria-controls="AppNavBar" aria-expanded="false" aria-label="Toggle navigation" data-bs-target="#AppNavBar" data-bs-toggle="collapse">
-          <span class="navbar-toggler-icon"/>
-        </button>
-        <div class="collapse navbar-collapse" id="AppNavBar">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a shape="rect" class="nav-link" href="/chandamama-stories">
-                <i class="fas fa-cloud-moon"/>
- Chandamama Stories              </a>
-            </li>
-            <li class="nav-item">
-              <a shape="rect" class="nav-link" href="/qa">
-                <i class="fas fa-life-ring"/>
- Help              </a>
-            </li>
-            <li class="nav-item">
-              <a shape="rect" class="nav-link" href="/rest-console">
-                <i class="fab fa-linux"/>
- Rest Console              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a shape="rect" class="nav-link dropdown-toggle" id="ToolsDropDown" aria-expanded="false" data-bs-toggle="dropdown" href="#" role="button">
-                <i class="fas fa-tools"/>
- Tools              </a>
-              <ul class="dropdown-menu" aria-labelledby="ToolsDropDown">
-                <li class="class">
-                  <a shape="rect" class="dropdown-item" href="/tools/base64-encode-decode">Base64 Encode/Decode</a>
-                </li>
-                <li class="class">
-                  <a shape="rect" class="dropdown-item" href="/tools/url-encode-decode">Url Encode/Decode</a>
-                </li>
-                <li class="class">
-                  <a shape="rect" class="dropdown-item" href="/tools/gcode-translator">G-Code Translator</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a shape="rect" class="nav-link" href="/consumer/login">Login</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="container pt-3">
-      <style type="text/css">.code-text code {color: #bdbdbd;display: block;}.code-text code b {color: #81a2be;font-weight: 900;}.code-text code em {color: #b294bb;font-style: unset;}.code-text code i {color: #b5bd68;}.code-text code span {color: #f0c674;}</style>
-      <div class="card text-white border-secondary bg-dark">
-        <div class="card-header">
-          <h1 class="card-title text-warning">
-            <i class="fas fa-ghost text-white slide-right"/>
- HTTP: Not Found           </h1>
-        </div>
-        <div class="card-body">
-          <h3 class="leaad code-text">
-            <code class="mb-3">
-              <span>this_page</span>
-.              <em>not_found</em>
- = true            </code>
-          </h3>
-          <p class="lead code-text">
-            <code class="mb-2">
-              <span>if</span>
-              <b>you_spelt_it_wrong</b>
-              <br clear="none"/>
-                <span>try_again</span>
-              <br clear="none"/>
-            </code>
-            <code class="mb-2">
-              <span>
-elsif                 <b>we_screwed_up</b>
-              </span>
-              <br clear="none"/>
-                <em>print</em>
-              <i>"We're really sorry about that."</i>
-              <br clear="none"/>
-            </code>
-            <code class="mb-2">
-              <span>end</span>
-            </code>
-            <code class="mb-2">
-              <span>redirect_to</span>
-              <em>home_page</em>
-            </code>
-          </p>
-        </div>
-        <div class="card-footer">
-          <p class="text-danger">We are sorry, something went wrong. Please try again later.</p>
-        </div>
-      </div>
-    </div>
-    <hr class="mt-5"/>
-    <div class="container">
-      <div class="footer">
-        <ul class="list-inline">
-          <li class="list-inline-item">© Go Rest 2024</li>
-          <li class="list-inline-item float-lg-end">
-            <a shape="rect" href="/privacy-policy">Privacy Policy</a>
-          </li>
-          <li class="list-inline-item float-lg-end me-3">
-            <a shape="rect" href="/contact-us">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </body>
-</html>
+{
+    "message": "Authentication failed"
+}

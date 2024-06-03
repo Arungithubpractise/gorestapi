@@ -2,14 +2,13 @@ package pojo;
 
 public class user {
 	
+	
 	int id;
-	String username;
-	String firstname;
-	String lastname;
+	String name;
 	String email;
-	String password;
-	String phone;
-	int userstatus = 0;
+	String gender;
+	String status;
+	
 	
 	public int getId() {
 		return id;
@@ -17,23 +16,11 @@ public class user {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getUsername() {
-		return username;
+	public String getName() {
+		return name;
 	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	public String getFirstname() {
-		return firstname;
-	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
-	public String getLastname() {
-		return lastname;
-	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getEmail() {
 		return email;
@@ -41,25 +28,18 @@ public class user {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPassword() {
-		return password;
+	public String getGender() {
+		return gender;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
-	public String getPhone() {
-		return phone;
+	public String getStatus() {
+		return status;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setStatus(String status) {
+		this.status = status;
 	}
-	public int getUserstatus() {
-		return userstatus;
-	}
-	public void setUserstatus(int userstatus) {
-		this.userstatus = userstatus;
-	}
-	
 	
 
 }

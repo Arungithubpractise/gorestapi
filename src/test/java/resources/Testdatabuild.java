@@ -28,15 +28,13 @@ public class Testdatabuild {
 		use = new user();
 		
 		use.setId(1);
-		use.setUsername("govind kumar");
-		use.setFirstname("govind");
-		use.setLastname("kumar");
+		use.setName("govind kumar");
 		use.setEmail("govind@gmail.com");
-		use.setPassword("govind123");
-		use.setPhone("84562146");
-		use.setUserstatus(0); 
+		use.setGender("Male");
+		use.setStatus("Active"); 
 		
 		return use;
+			
 		
 	}
 
