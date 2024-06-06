@@ -26,7 +26,9 @@ public class Utils {
 		if(req==null)
 		{
 		PrintStream log =new PrintStream(new FileOutputStream("logging.txt"));
-		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("baseUrl")).addHeader("Authorization", "c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292")
+		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("baseUrl"))
+				 .addHeader("Authorization", "c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292")
+				 .setAccept(ContentType.JSON)
 				 .addFilter(RequestLoggingFilter.logRequestTo(log))
 				 .addFilter(ResponseLoggingFilter.logResponseTo(log))
 		.setContentType(ContentType.JSON).build();
