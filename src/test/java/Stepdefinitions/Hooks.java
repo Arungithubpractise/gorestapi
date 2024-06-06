@@ -1,0 +1,29 @@
+package Stepdefinitions;
+
+import java.io.IOException;
+
+import io.cucumber.java.Before;
+import pojo.user;
+
+public class Hooks {
+	
+	//@Before("@DeletePlace")
+	public void beforeScenario(user payload) throws IOException
+	{		//execute this code only when place id is null
+		//write a code that will give you place id
+		
+		stepdefinition m = new stepdefinition();
+		
+		if(stepdefinition.place_id==null)
+		{
+		m.create_a_user();
+			
+			
+		//m.add_Place_Payload_with("Shetty", "French", "Asia");
+		//m.user_calls_with_http_request("AddPlaceAPI", "POST");
+		//m.verify_place_Id_created_maps_to_using("Shetty", "getPlaceAPI");
+		}
+		
+
+	}
+}

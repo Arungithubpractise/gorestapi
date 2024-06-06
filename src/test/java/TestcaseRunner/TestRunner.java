@@ -1,4 +1,4 @@
-package cucumber.Options;
+package TestcaseRunner;
 
 
 
@@ -8,8 +8,8 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/main/java/features",
-                 glue = { "stepDefinations" }, 
+@CucumberOptions(features = "src/main/java/Features",
+                 glue = { "Stepdefinitions" }, 
                  publish = true, 
                  plugin = { "pretty","html:target/CucumberReports/CucumberReport.html" })
 
