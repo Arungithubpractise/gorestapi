@@ -39,21 +39,12 @@ public class stepdefinition extends Utils {
 	{
 		res=given().log().all().spec(requestSpecification())
 				.body(Testdatabuild.setupdata());
-		
-		//RestAssured.baseURI = "https://gorest.co.in";
-		//RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://gorest.co.in").setContentType(ContentType.JSON).setAccept(ContentType.JSON).build();
-		
-		//resspec = new ResponseSpecBuilder().expectStatusCode(201).expectContentType(ContentType.JSON).build();
-		//res =given().log().all().spec(req).body(Testdatabuild.setupdata());
-				
+					
 	}
 	
 	@When("user uses {string}  with {string} http request")
 	public void user_uses_with_http_request(String resource, String method) 
 	{
-	 
-		//response = res.when().post("/public/v2/users").then().log().all().spec(resspec).extract().response();
-		
 		GorestAPIResources resourceAPI=GorestAPIResources.valueOf(resource);
 		System.out.println(resourceAPI.getResource());
 		
@@ -71,14 +62,17 @@ public class stepdefinition extends Utils {
 	@Then("check data is created with status code {int} created")
 	public void check_data_is_created_with_status_code_created(Integer no) {
 	    
-		int resstatusCode = response.getStatusCode();
-		System.out.println(resstatusCode);
-		System.out.println(no);
+		//int resstatusCode = response.getStatusCode();
+		
+		//String str = Integer.toString(resstatusCode);
 		
 		Integer s = no;
 		String a = s.toString();
 		 
-		// Assert.assertEquals(a, resstatusCode);
+		Asser
+		Assert.assertEquals(no , response.getStatusCode());
+		
+		assertEquals(response.getStatusCode(),200);
 	  
 	}
 	
