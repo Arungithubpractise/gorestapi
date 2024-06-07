@@ -16,9 +16,12 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import junit.framework.Assert;
+
 import resources.GorestAPIResources;
 import resources.Testdatabuild;
 import utils.Utils;  
+import static org.junit.Assert.*;
 
 
 
@@ -58,25 +61,43 @@ public class stepdefinition extends Utils {
 		resspec =new ResponseSpecBuilder().expectStatusCode(201).expectContentType(ContentType.JSON).build();
 		
 		if(method.equalsIgnoreCase("POST"))
-		 response =res.when().post(resourceAPI.getResource());
+		 response =res.when().log().all().post(resourceAPI.getResource());
 		else if(method.equalsIgnoreCase("GET"))
 			 response =res.when().log().all().get(resourceAPI.getResource());
 	   
 	}
+	
+
 	@Then("check data is created with status code {int} created")
-	public void check_data_is_created_with_status_code_created(Integer int1) {
-		
-	assertEquals(response.getStatusCode(),201);
+	public void check_data_is_created_with_status_code_created(Integer no) {
 	    
+		int resstatusCode = response.getStatusCode();
+		System.out.println(resstatusCode);
+		System.out.println(no);
+		
+		Integer s = no;
+		String a = s.toString();
+		 
+		// Assert.assertEquals(a, resstatusCode);
+	  
+	}
+	
+	
+	@Then("check data is created with status code {string} created")
+	public void check_data_is_created_with_status_code_created(String string) {
+		
+		int resstatusCode = response.getStatusCode();
+		System.out.println(resstatusCode);
+		System.out.println(string);
+		 
+		 Assert.assertEquals(string, resstatusCode );
 	}
 	
 	@Then("{string} in response body is {string}")
 	public void in_response_body_is(String key	, String expectedvalue) {
 		
-		String resp = response.asString();
-		JsonPath js = new JsonPath(resp);
-		
-		assertEquals(js.get(key).toString(),expectedvalue);
+		Assert.assertEquals(expectedvalue, getJsonPath(response, key));
+		//Assert.assertEquals(expectedvalue, actual);
 	  
 	}
 
