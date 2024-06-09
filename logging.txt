@@ -5,41 +5,50 @@ Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Authorization=c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292
-				Accept=*/*
+Headers:		Authorization=Bearer c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292
+				Accept=application/json, application/javascript, text/javascript, text/json
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "id": 1,
-    "name": "govind kumar",
-    "email": "govind@gmail.com",
+    "id": 1793580716,
+    "name": "devin.rath",
+    "email": "jann.mills@example.com",
     "gender": "Male",
     "status": "Active"
 }
-HTTP/1.1 401 Unauthorized
-Date: Mon, 03 Jun 2024 12:35:12 GMT
+HTTP/1.1 201 Created
+Date: Fri, 07 Jun 2024 12:07:56 GMT
 Content-Type: application/json; charset=utf-8
-Content-Length: 35
+Content-Length: 101
 Connection: keep-alive
-Cache-Control: no-cache
+Cache-Control: max-age=0, private, must-revalidate
+etag: W/"4b63ded4c45961cec296dac9d67eb03a"
+location: https://gorest.co.in/public/v2/users/6952338
 referrer-policy: strict-origin-when-cross-origin
 vary: Origin
 x-content-type-options: nosniff
 x-download-options: noopen
 x-frame-options: SAMEORIGIN
 x-permitted-cross-domain-policies: none
-x-request-id: e7fa5a7d-f0ec-4b2e-8cf1-6c2674c18b40
-x-runtime: 0.013267
+x-ratelimit-limit: 90
+x-ratelimit-remaining: 89
+x-ratelimit-reset: 1
+x-request-id: 4f1765fb-d4d4-463f-a953-fdc0ce1d522c
+x-runtime: 0.112163
 x-xss-protection: 0
 CF-Cache-Status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=JNFx%2FTeVG0nHnd0LH%2BfztFFzSoTx0G%2Bk5vdbGurQD0Mh7qIG2IhmNIL%2BI8KJAQQ%2B%2FJ%2FU5NoBnihCKFpH7Um7e%2B0dpoPg5BFrL9u55dTT%2BJcyf6YXkcDFY1eGeL2MGaE%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=tIWFtFcKgmduQ0jgYlW9wnMge3FCQXTOEVuJb4jDziTdiica92LM2YDL%2Fxuv0KtCs1QVE8gIKAxZZl5dPjbbhu7ZG4lNXG5dy8mneHUyTrYr129gUDrgjHr%2BJeTZfbA%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 88dfb8bf8b3aa8fc-MAA
+CF-RAY: 890086514870a90e-MAA
 alt-svc: h3=":443"; ma=86400
 
 {
-    "message": "Authentication failed"
+    "id": 6952338,
+    "name": "devin.rath",
+    "email": "jann.mills@example.com",
+    "gender": "male",
+    "status": "active"
 }

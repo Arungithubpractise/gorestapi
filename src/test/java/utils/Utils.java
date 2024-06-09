@@ -22,11 +22,13 @@ public class Utils {
 	
 	public RequestSpecification requestSpecification() throws IOException
 	{
-		
+		String Token = "c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292";
 		if(req==null)
 		{
 		PrintStream log =new PrintStream(new FileOutputStream("logging.txt"));
-		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("baseUrl")).addHeader("Authorization", "c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292")
+		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("baseUrl"))
+				 .addHeader("Authorization", "Bearer "+Token)
+				 .setAccept(ContentType.JSON)
 				 .addFilter(RequestLoggingFilter.logRequestTo(log))
 				 .addFilter(ResponseLoggingFilter.logResponseTo(log))
 		.setContentType(ContentType.JSON).build();
@@ -52,7 +54,14 @@ public class Utils {
 	
 	public String getJsonPath(Response response,String key)
 	{
+	
+		System.out.println(key);
+		System.out.println("----------" +response);
+		
 		  String resp=response.asString();
+		  
+		  System.out.println("----------" +resp);
+		  
 		JsonPath   js = new JsonPath(resp);
 		return js.get(key).toString();
 	}

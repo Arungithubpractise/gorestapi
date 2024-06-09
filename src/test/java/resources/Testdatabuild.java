@@ -12,20 +12,21 @@ public class Testdatabuild {
 	
 	public static user setupdata()
 	{
-		/*faker = new Faker();
+		faker = new Faker();
 		use = new user();
 				
 		use.setId(faker.idNumber().hashCode()); 
-		use.setUsername(faker.name().username());
-		use.setFirstname(faker.name().firstName()); 
-		use.setLastname(faker.name().lastName());
+		use.setName(faker.name().username());
+		//use.setFirstname(faker.name().firstName()); 
+		use.setGender("Male");
 		use.setEmail(faker.internet().safeEmailAddress()); 
-		use.setPassword(faker.internet().password (5, 10)); 
-		use.setPhone(faker.phoneNumber().cellPhone());
-		return use;*/
+		use.setStatus("Active"); 
+		//use.setPassword(faker.internet().password (5, 10)); 
+		//use.setPhone(faker.phoneNumber().cellPhone());
+		return use;
 		
 		
-		use = new user();
+	/*	use = new user();
 		
 		use.setId(1);
 		use.setName("govind kumar");
@@ -33,7 +34,7 @@ public class Testdatabuild {
 		use.setGender("Male");
 		use.setStatus("Active"); 
 		
-		return use;
+		return use;*/
 			
 		
 	}
