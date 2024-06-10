@@ -32,7 +32,7 @@ public class stepdefinition extends Utils {
 	Response response;
 	Testdatabuild test = new Testdatabuild();
 	
-	static String place_id;
+	static String user_id;
 	
 	@Given("create a user")
 	public void create_a_user() throws IOException 
@@ -58,13 +58,12 @@ public class stepdefinition extends Utils {
 	   
 	}
 		
-	
-	@Then("check data is created with status code {int} created")
-	public void check_data_is_created_with_status_code_created(int no)
-	
-   {
+	@Then("the API call got success with status code {int}")
+	public void the_api_call_got_success_with_status_code(int no) {
+		
 		Assert.assertEquals(no, response.getStatusCode());
 	}
+
 	
 	
 	@Then("{string} in response body is {string}")
@@ -74,6 +73,16 @@ public class stepdefinition extends Utils {
 		//Assert.assertEquals(expectedvalue, actual);
 	  
 	}
+	
+	@Given("DeleteUser Payload")
+	public void delete_user_payload() throws IOException {
+	      
+		 user_id=getJsonPath(response,"id");
+		 
+		 res =given().spec(requestSpecification()).body(response.);
+	}
+	
+
 
 
 
