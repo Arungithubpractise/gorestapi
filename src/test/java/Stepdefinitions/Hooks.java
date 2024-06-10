@@ -14,7 +14,7 @@ public class Hooks {
 		
 		stepdefinition m = new stepdefinition();
 		
-		if(stepdefinition.place_id==null)
+		if(stepdefinition.user_id==null)
 		{
 		
 			
