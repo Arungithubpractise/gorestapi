@@ -57,35 +57,15 @@ public class stepdefinition extends Utils {
 			 response =res.when().log().all().get(resourceAPI.getResource());
 	   
 	}
+		
 	
-
 	@Then("check data is created with status code {int} created")
-	public void check_data_is_created_with_status_code_created(Integer no) {
-	    
-		//int resstatusCode = response.getStatusCode();
-		
-		//String str = Integer.toString(resstatusCode);
-		
-		Integer s = no;
-		String a = s.toString();
-		 
-		Asser
-		Assert.assertEquals(no , response.getStatusCode());
-		
-		assertEquals(response.getStatusCode(),200);
-	  
+	public void check_data_is_created_with_status_code_created(int no)
+	
+   {
+		Assert.assertEquals(no, response.getStatusCode());
 	}
 	
-	
-	@Then("check data is created with status code {string} created")
-	public void check_data_is_created_with_status_code_created(String string) {
-		
-		int resstatusCode = response.getStatusCode();
-		System.out.println(resstatusCode);
-		System.out.println(string);
-		 
-		 Assert.assertEquals(string, resstatusCode );
-	}
 	
 	@Then("{string} in response body is {string}")
 	public void in_response_body_is(String key	, String expectedvalue) {
