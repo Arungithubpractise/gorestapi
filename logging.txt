@@ -12,20 +12,20 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "id": 1793580716,
-    "name": "devin.rath",
-    "email": "jann.mills@example.com",
+    "id": 1247348185,
+    "name": "petrina.terry",
+    "email": "neda.king@example.com",
     "gender": "Male",
     "status": "Active"
 }
 HTTP/1.1 201 Created
-Date: Fri, 07 Jun 2024 12:07:56 GMT
+Date: Mon, 10 Jun 2024 05:17:10 GMT
 Content-Type: application/json; charset=utf-8
-Content-Length: 101
+Content-Length: 103
 Connection: keep-alive
 Cache-Control: max-age=0, private, must-revalidate
-etag: W/"4b63ded4c45961cec296dac9d67eb03a"
-location: https://gorest.co.in/public/v2/users/6952338
+etag: W/"2899b42345f692698e3d689109b8b3c2"
+location: https://gorest.co.in/public/v2/users/6956307
 referrer-policy: strict-origin-when-cross-origin
 vary: Origin
 x-content-type-options: nosniff
@@ -35,20 +35,20 @@ x-permitted-cross-domain-policies: none
 x-ratelimit-limit: 90
 x-ratelimit-remaining: 89
 x-ratelimit-reset: 1
-x-request-id: 4f1765fb-d4d4-463f-a953-fdc0ce1d522c
-x-runtime: 0.112163
+x-request-id: fd201b34-80cb-409a-a128-10174fd81b4d
+x-runtime: 0.128714
 x-xss-protection: 0
 CF-Cache-Status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=tIWFtFcKgmduQ0jgYlW9wnMge3FCQXTOEVuJb4jDziTdiica92LM2YDL%2Fxuv0KtCs1QVE8gIKAxZZl5dPjbbhu7ZG4lNXG5dy8mneHUyTrYr129gUDrgjHr%2BJeTZfbA%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=N2ZyKwgDvlImJdV1ysaIheaVUBNpVPDVjhLdZV1RTU8IKNyPjHuw0zfC3WO32nbzP4LhFZWk23boWsImbg36Ja4oDH9tbCMAyskSSXyuwp72%2FwBS1xsKH2pNeOLLoO0%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 890086514870a90e-MAA
+CF-RAY: 8916e4bcfdc07f8e-MAA
 alt-svc: h3=":443"; ma=86400
 
 {
-    "id": 6952338,
-    "name": "devin.rath",
-    "email": "jann.mills@example.com",
+    "id": 6956307,
+    "name": "petrina.terry",
+    "email": "neda.king@example.com",
     "gender": "male",
     "status": "active"
 }
