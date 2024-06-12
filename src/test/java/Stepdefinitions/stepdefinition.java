@@ -79,7 +79,7 @@ public class stepdefinition extends Utils {
 	      
 		 user_id=getJsonPath(response,"id");
 		 
-		// res =given().spec(requestSpecification()).body(response.);
+	//	 res =given().spec(requestSpecification()).body(response.);
 	}
 	
 
