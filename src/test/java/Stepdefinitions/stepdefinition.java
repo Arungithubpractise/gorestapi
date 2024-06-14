@@ -23,8 +23,6 @@ import resources.Testdatabuild;
 import utils.Utils;  
 import static org.junit.Assert.*;
 
-
-
 public class stepdefinition extends Utils {
 	
 	RequestSpecification res;
@@ -49,7 +47,7 @@ public class stepdefinition extends Utils {
 		System.out.println(resourceAPI.getResource());
 		
 		
-		resspec =new ResponseSpecBuilder().expectStatusCode(201).expectContentType(ContentType.JSON).build();
+		resspec = new ResponseSpecBuilder().expectStatusCode(201).expectContentType(ContentType.JSON).build();
 		
 		if(method.equalsIgnoreCase("POST"))
 		 response =res.when().log().all().post(resourceAPI.getResource());
@@ -69,22 +67,19 @@ public class stepdefinition extends Utils {
 	@Then("{string} in response body is {string}")
 	public void in_response_body_is(String key	, String expectedvalue) {
 		
-		Assert.assertEquals(expectedvalue, getJsonPath(response, key));
+		Assert.assertEquals(expectedvalue, getresponsestring(response, key));
 		//Assert.assertEquals(expectedvalue, actual);
 	  
 	}
 	
-	@Given("DeleteUser Payload")
-	public void delete_user_payload() throws IOException {
-	      
-		 user_id=getJsonPath(response,"id");
-		 
-		 res =given().spec(requestSpecification()).body(response.);
+	@Given("fetch the user data created")
+	public void fetch_the_user_data_created() 
+	{
+		
+		GorestAPIResources gr = new GorestAPIResources()
+		  Response	resp = given().log().all().pathParam("userid", Utils.getid(response))
+		  .when().get();
+		  System.out.println(resp);
 	}
-	
-
-
-
-
 
 }

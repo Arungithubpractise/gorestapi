@@ -12,20 +12,20 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "id": 1318080469,
-    "name": "ali.smith",
-    "email": "emil.hackett@example.com",
+    "id": 508873523,
+    "name": "johna.quigley",
+    "email": "dollie.kuhn@example.com",
     "gender": "Male",
     "status": "Active"
 }
 HTTP/1.1 201 Created
-Date: Mon, 10 Jun 2024 10:07:07 GMT
+Date: Fri, 14 Jun 2024 09:54:24 GMT
 Content-Type: application/json; charset=utf-8
-Content-Length: 102
+Content-Length: 105
 Connection: keep-alive
 Cache-Control: max-age=0, private, must-revalidate
-etag: W/"8cf0439eee419cb1f77037a09bfba927"
-location: https://gorest.co.in/public/v2/users/6956667
+etag: W/"bf4b4b6b0103f6e0a105449fee240c31"
+location: https://gorest.co.in/public/v2/users/6963175
 referrer-policy: strict-origin-when-cross-origin
 vary: Origin
 x-content-type-options: nosniff
@@ -35,20 +35,20 @@ x-permitted-cross-domain-policies: none
 x-ratelimit-limit: 90
 x-ratelimit-remaining: 89
 x-ratelimit-reset: 1
-x-request-id: a5a9afa7-3684-4d84-aeb8-be5616bd2164
-x-runtime: 0.098123
+x-request-id: b3624989-c04a-4125-a81c-60966b65ba50
+x-runtime: 0.083286
 x-xss-protection: 0
 CF-Cache-Status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=C4pk%2BL3MCXToIZxNNH2FVSFMPpR%2BApruFuyMTKi2sdzmwJwrZMn5l27q%2B4rwIPiRPOw1fbcIbLP8BzseJKWLNkYHx9hC%2B2i8wpDf1aBindK9wmtcJtLgVoUKqO7pFIY%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Fr%2BrMh9fhvXem57ZyB1T5cZ2zCh2EEcl56%2F5nEj%2BHnXaTUIlsPkG1amdKvGYwo6JYaaSGxz37hrVolf8%2BNaGGqHMe5svL7NUvnxxVGUu2L2srzZUf%2BUXiYJbPP6jFdQ%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 89188d78fde77faf-MAA
+CF-RAY: 893970540a397f93-MAA
 alt-svc: h3=":443"; ma=86400
 
 {
-    "id": 6956667,
-    "name": "ali.smith",
-    "email": "emil.hackett@example.com",
+    "id": 6963175,
+    "name": "johna.quigley",
+    "email": "dollie.kuhn@example.com",
     "gender": "male",
     "status": "active"
 }
