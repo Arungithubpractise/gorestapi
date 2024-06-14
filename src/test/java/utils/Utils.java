@@ -52,7 +52,7 @@ public class Utils {
 	}
 	
 	
-	public String getJsonPath(Response response,String key)
+	public static String getresponsestring(Response response,String key)
 	{
 	
 		System.out.println(key);
