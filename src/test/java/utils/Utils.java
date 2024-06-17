@@ -1,13 +1,11 @@
 package utils;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Properties;
 
-import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
@@ -40,10 +38,10 @@ public class Utils {
 	}
 	
 	
-	public static String getGlobalValue(String key) throws IOException
+	public  String getGlobalValue(String key) throws IOException
 	{
 		Properties prop =new Properties();
-		FileInputStream fis =new FileInputStream("C:\\Users\\admin\\eclipse-workspace\\Restassured\\src\\test\\java\\resources\\global.properties");
+		FileInputStream fis =new FileInputStream("C:\\Users\\arunn\\git\\Restassured\\src\\test\\java\\resources\\global.properties");
 		prop.load(fis);
 		return prop.getProperty(key);
 	
@@ -52,9 +50,8 @@ public class Utils {
 	}
 	
 	
-	public static String getresponsestring(Response response,String key)
+	public  String getresponsestring(Response response,String key)
 	{
-	
 		System.out.println(key);
 		System.out.println("----------" +response);
 		
@@ -66,8 +63,12 @@ public class Utils {
 		return js.get(key).toString();
 	}
 	
-	public static String getid(Response response)
+	
+	
+	public  String getid(Response response)
 	{
+		
+		System.out.println(response);
 		  String resp=response.asString();
 		  
 		  System.out.println("----------" +resp);
