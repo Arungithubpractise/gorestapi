@@ -14,17 +14,19 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class Utils {
+public class GoRestApi_Utils {
 
 	public static RequestSpecification req;
 	
-	public RequestSpecification requestSpecification() throws IOException
+	public RequestSpecification GoRestApirequestSpecification() throws IOException
 	{
-		String Token = "c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292";
+		String Token = getGlobalValue("GoResttoken");
+		//GoResttoken"c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292";
+		
 		if(req==null)
 		{
-		PrintStream log =new PrintStream(new FileOutputStream("logging.txt"));
-		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("baseUrl"))
+		PrintStream log =new PrintStream(new FileOutputStream("GoRestApilogging.txt"));
+		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("GoRestbaseUrl"))
 				 .addHeader("Authorization", "Bearer "+Token)
 				 .setAccept(ContentType.JSON)
 				 .addFilter(RequestLoggingFilter.logRequestTo(log))
@@ -32,21 +34,17 @@ public class Utils {
 		.setContentType(ContentType.JSON).build();
 		 return req;
 		}
-		return req;
-		
-		
+		return req;		
 	}
 	
 	
 	public  String getGlobalValue(String key) throws IOException
 	{
 		Properties prop =new Properties();
-		FileInputStream fis =new FileInputStream("C:\\Users\\arunn\\git\\Restassured\\src\\test\\java\\resources\\global.properties");
+		FileInputStream fis =new FileInputStream("./src/test/java/resources/global.properties");
 		prop.load(fis);
 		return prop.getProperty(key);
-	
-		
-		
+			
 	}
 	
 	

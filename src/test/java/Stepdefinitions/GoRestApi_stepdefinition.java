@@ -1,22 +1,23 @@
 package Stepdefinitions;
 
 import static io.restassured.RestAssured.given;
+
 import java.io.IOException;
+
 import org.junit.Assert;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import resources.GorestAPIResources;
 import resources.Testdatabuild;
-import utils.Utils;
+import utils.GoRestApi_Utils;
 
-public class stepdefinition extends Utils {
+public class GoRestApi_stepdefinition extends GoRestApi_Utils {
 
 	RequestSpecification res;
 	ResponseSpecification resspec;
@@ -27,7 +28,7 @@ public class stepdefinition extends Utils {
 	@Given("create a user with {string}  {string}")
 	public void create_a_user_with(String gender , String status) throws IOException {
 	    
-		res = given().log().all().spec(requestSpecification()).body(Testdatabuild.setupdata(gender, status));
+		res = given().log().all().spec(GoRestApirequestSpecification()).body(Testdatabuild.setupdata(gender, status));
 		
 	}
 
@@ -79,11 +80,11 @@ public class stepdefinition extends Utils {
 	@Given("fetch the data created of user with {string}")
 	public void fetch_the_data_created_of_user_with(String getuser) throws IOException {
 
-		id = getresponsestring(stepdefinition.response, "id");
+		id = getresponsestring(GoRestApi_stepdefinition.response, "id");
 
 		System.out.println(id);
 
-		res = given().log().all().spec(requestSpecification()).queryParam("id", id);
+		res = given().log().all().spec(GoRestApirequestSpecification()).queryParam("id", id);
 		user_uses_with_http_request(getuser, "GET");
 
 	}
@@ -91,16 +92,16 @@ public class stepdefinition extends Utils {
 	@Given("UpdateUser with {string}")
 	public void update_user_with(String updateuser) throws IOException 
 	{
-		res = given().log().all().spec(requestSpecification()).body(Testdatabuild.updatedata()).queryParam("id", id);;
+		res = given().log().all().spec(GoRestApirequestSpecification()).body(Testdatabuild.updatedata()).queryParam("id", id);;
 		user_uses_with_http_request(updateuser, "PUT");
 	}
 
 	@Given("Delete the user with {string}")
 	public void delete_the_user_with(String deleteuser) throws IOException {
 
-		System.out.println("check " + stepdefinition.id);
+		System.out.println("check " + GoRestApi_stepdefinition.id);
 		
-		res = given().spec(requestSpecification()).queryParam("id", stepdefinition.id);
+		res = given().spec(GoRestApirequestSpecification()).queryParam("id", GoRestApi_stepdefinition.id);
 		
 		user_uses_with_http_request(deleteuser, "DELETE");
 		
