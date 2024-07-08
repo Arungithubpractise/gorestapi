@@ -12,8 +12,6 @@ Examples:
 	|gender  | status   |
 	|male    | inactive |
 	
-
-
 Scenario: Verify the User created can be fetched from the server
 
 Given fetch the data created of user with "getuserApi" 
