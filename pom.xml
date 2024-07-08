@@ -10,11 +10,43 @@
   <name>GorestAPI</name>
   <url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+
+<properties>
+   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   <selenium.version>3.141.59</selenium.version>
+   <junit.version>4.13.2</junit.version>
+   <allure.junit4.version>2.14.0</allure.junit4.version>
+   <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+   <maven.compiler.source>11</maven.compiler.source>
+   <maven.compiler.target>11</maven.compiler.target>
+   <aspectj.version>1.9.6</aspectj.version>
+   <maven-surefire-plugin-version>3.0.0-M5</maven-surefire-plugin-version>
+ </properties>
+
+
 
   <dependencies>
+	
+	
+   <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
+     
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+     
+     <dependency>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-junit4</artifactId>
+        <version>${allure.junit4.version}</version>
+        <scope>test</scope>
+    </dependency>    
 	  
 	  <dependency>
     <groupId>io.rest-assured</groupId>
@@ -66,4 +98,48 @@
 	</dependency>
    
   </dependencies>
+  
+  <build>
+        
+       <plugins>
+   <!-- Compiler plug-in -->
+   
+           <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source> <!--For JAVA 8 use 1.8-->
+                    <target>${maven.compiler.target}</target> <!--For JAVA 8 use 1.8-->
+                </configuration>
+            </plugin>
+             
+     <!-- Added Surefire Plugin configuration to execute tests -->       
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>${maven-surefire-plugin-version}</version>
+            <configuration>
+                <testFailureIgnore>false</testFailureIgnore>
+                <argLine>
+                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                </argLine>
+                <properties>
+                    <property>
+                        <name>listener</name>
+                        <value>io.qameta.allure.junit4.AllureJunit4</value>
+                    </property>
+                </properties>
+            </configuration>
+            <dependencies>
+                <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjweaver</artifactId>
+                    <version>${aspectj.version}</version>
+                </dependency>
+            </dependencies>
+        </plugin>
+      </plugins>
+  </build>
+  
 </project>

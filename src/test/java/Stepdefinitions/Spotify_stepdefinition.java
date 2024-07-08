@@ -14,10 +14,24 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import resources.SpotifyAPIResources;
 import utils.Spotify_Utils;
+
+
+@Epic("Validating Gorest Api for a user")
+@Feature("Login Page Tests")
+
+@Severity(SeverityLevel.NORMAL)
+
+
+@Story("Title of Login Page")
 
 public class Spotify_stepdefinition extends Spotify_Utils {
 

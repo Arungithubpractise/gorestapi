@@ -5,17 +5,34 @@ import static io.restassured.RestAssured.given;
 import java.io.IOException;
 
 import org.junit.Assert;
+import org.junit.Test;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import resources.GorestAPIResources;
 import resources.Testdatabuild;
 import utils.GoRestApi_Utils;
+
+
+@Epic("Validating Gorest Api for a user")
+@Feature("Login Page Tests")
+
+@Severity(SeverityLevel.NORMAL)
+
+
+@Story("Title of Login Page")
+
 
 public class GoRestApi_stepdefinition extends GoRestApi_Utils {
 
