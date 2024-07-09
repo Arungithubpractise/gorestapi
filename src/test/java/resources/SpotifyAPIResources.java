@@ -3,6 +3,7 @@ package resources;
 public enum SpotifyAPIResources 
 {
 	Token("/api/token");
+	//createplaylistApi("playlists");
 	
 	private String resource;
 	
