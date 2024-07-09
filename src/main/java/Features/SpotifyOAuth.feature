@@ -5,3 +5,14 @@ Feature: OAuth Generation using Authorization Code
     When I request an access token using the authorization "Token" with "POST" http request 
     Then I should receive a valid access token
     
+    Scenario: create a playlist    
+    Given create a playlist with "userid"
+    When user uses "createplaylistApi"  with "post" http request
+    Then the API call got success with status code 201
+   
+   
+    Scenario: Adding Custom Playlist Cover Image 
+    Given I upload the image to the endpoint "/images" with image id 
+    When the upload is successful
+    Then the response status code should be 200
+    And the response should contain "Image uploaded successfully"

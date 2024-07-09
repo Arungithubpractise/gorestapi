@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Properties;
 
+import Stepdefinitions.Spotify_stepdefinition;
+import io.restassured.authentication.AuthenticationScheme;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
@@ -14,31 +16,14 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class Spotify_Utils {
+	
+	AuthenticationScheme accessToken;
 
 	public static RequestSpecification req;
 	
-	/*public RequestSpecification requestSpecification() throws IOException
-	{
-		String Token = getGlobalValue("GoResttoken");
-		//GoResttoken"c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292";
-		
-		if(req==null)
-		{
-		PrintStream log =new PrintStream(new FileOutputStream("logging.txt"));
-		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("baseUrl"))
-				 .addHeader("Authorization", "Bearer "+Token)
-				 .setAccept(ContentType.JSON)
-				 .addFilter(RequestLoggingFilter.logRequestTo(log))
-				 .addFilter(ResponseLoggingFilter.logResponseTo(log))
-		.setContentType(ContentType.JSON).build();
-		 return req;
-		}
-		return req;		
-	}*/
-	
 	public RequestSpecification SpotifyrequestSpecification() throws IOException
 	{
-		//String Token = "c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292";
+		
 		
 		if(req==null)   // it will make shure when 2nd runtest case is running it is not overlapping previous one in looging.txt
 		{
@@ -53,17 +38,24 @@ public class Spotify_Utils {
 		}
 		return req;	
 		
-
-		/*String response = given().urlEncodingEnabled(false) //This is usually recommended, but it can be useful to disable URL encoding
-				.queryParams("client_id", "905f333391b643669dfdf6b0f98bc5ee")
-				.queryParams("client_secret", "29d45b172e58470c99d221da20abe5d9")
-				.queryParams("grant_type", "client_credentials")
-				.post("https://accounts.spotify.com/api/token").asString();*/
+	}
 	
+	public RequestSpecification createplaylist() throws IOException
+	{
+		
+		if(req==null) 
+		{
+		PrintStream log =new PrintStream(new FileOutputStream("Spotifylogging.txt"));
+		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("Spotifyuserid"))
+				 .setAuth(accessToken)
+				 .addFilter(RequestLoggingFilter.logRequestTo(log))
+				 .addFilter(ResponseLoggingFilter.logResponseTo(log)).build();	 
+		 return req;
+		}
+		return req;	
+		
 	}
 		
-	
-
 	
 	public  String getGlobalValue(String key) throws IOException
 	{
@@ -88,8 +80,7 @@ public class Spotify_Utils {
 		return js.get(key).toString();
 	}
 	
-	
-	
+
 	public  static String getaccesstoken(Response response)
 	{
 		

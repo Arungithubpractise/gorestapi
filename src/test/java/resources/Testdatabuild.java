@@ -31,5 +31,18 @@ public class Testdatabuild {
 		return Str;
 	}
 	
+	
+	public static String playlistbody()
+	{
+		String Str = "{\r\n"
+				+ "    \"name\": \"Arunkumar Playlist\",\r\n"
+				+ "    \"description\": \"Creating New playlist description\",\r\n"
+				+ "    \"public\": false\r\n"
+				+ "}";
+		
+		return Str;
+	}
+	
+	
 		
 }
