@@ -1,6 +1,7 @@
 package Stepdefinitions;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.*;
 
 import java.io.IOException;
 
@@ -72,15 +73,14 @@ public class GoRestApi_stepdefinition extends GoRestApi_Utils {
 	@Then("the API call got success with status code {int}")
 	public void the_api_call_got_success_with_status_code(int no) 
 	{
-		//assertEquals(response.getStatusCode(), no);
-		Assert.assertEquals(response.getStatusCode(), no);
+		assertEquals(response.getStatusCode(), no);
+	
 	}
 
 	@And("{string} in response body is {string}")
 	public void in_response_body_is(String key, String expectedvalue) 
 	{
-		Assert.assertEquals(expectedvalue, getresponsestring(response, key));
-		// Assert.assertEquals(expectedvalue, actual);
+		assertEquals(getresponsestring(response, key),expectedvalue);	
 	}
 
 	/*
