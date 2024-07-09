@@ -14,12 +14,14 @@ import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import resources.Testdatabuild;
 
 public class Spotify_Utils {
 	
-	AuthenticationScheme accessToken;
+	static String accessToken;
 
 	public static RequestSpecification req;
+	public static RequestSpecification playlistreq;
 	
 	public RequestSpecification SpotifyrequestSpecification() throws IOException
 	{
@@ -43,16 +45,17 @@ public class Spotify_Utils {
 	public RequestSpecification createplaylist() throws IOException
 	{
 		
-		if(req==null) 
+		if(playlistreq==null) 
 		{
 		PrintStream log =new PrintStream(new FileOutputStream("Spotifylogging.txt"));
-		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("Spotifyuserid"))
-				 .setAuth(accessToken)
+		 playlistreq=new RequestSpecBuilder().setBaseUri(getGlobalValue("SporifybaseUrl"))
+				 .addHeader("Authorization", "Bearer "+accessToken)
+				 .setBody(Testdatabuild.playlistbody())
 				 .addFilter(RequestLoggingFilter.logRequestTo(log))
 				 .addFilter(ResponseLoggingFilter.logResponseTo(log)).build();	 
-		 return req;
+		 return playlistreq;
 		}
-		return req;	
+		return playlistreq;	
 		
 	}
 		
@@ -67,9 +70,9 @@ public class Spotify_Utils {
 	}
 	
 	
-	public  String getresponsestring(Response response,String key)
+	public  String getresponsestring(Response response,int no)
 	{
-		System.out.println(key);
+		System.out.println(no);
 		System.out.println("----------" +response);
 		
 		  String resp=response.asString();
@@ -77,7 +80,7 @@ public class Spotify_Utils {
 		  System.out.println("----------" +resp);
 		  
 		JsonPath   js = new JsonPath(resp);
-		return js.get(key).toString();
+		return js.get().toString();
 	}
 	
 
@@ -90,7 +93,7 @@ public class Spotify_Utils {
 		  System.out.println("----------" +resp);
 			
 		JsonPath jsonPath = new JsonPath(resp);
-		String accessToken = jsonPath.getString("access_token");
+		 accessToken = jsonPath.getString("access_token");
 		System.out.println(accessToken);
 		
 		return accessToken;

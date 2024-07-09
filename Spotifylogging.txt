@@ -1,35 +1,119 @@
 Request method:	POST
-Request URI:	https://accounts.spotify.com/api/token?client_id=9393418e0d1e4ccdae4c92875eb5b438&client_secret=e6b36ae0b7ea4e40bb75156076ada1ba&grant_type=client_credentials
+Request URI:	https://accounts.spotify.com/v1/users/317gyhsluh6xwyu23hi6clu3yzcu/playlists
 Proxy:			<none>
 Request params:	<none>
-Query params:	client_id=9393418e0d1e4ccdae4c92875eb5b438
-				client_secret=e6b36ae0b7ea4e40bb75156076ada1ba
-				grant_type=client_credentials
+Query params:	<none>
 Form params:	<none>
 Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Headers:		Authorization=Bearer BQBQQz_AkURHgYEwHMJnnJS_eLqqB1gmLdjSZ1hftMLgAIR21eAvS10vjTK503YVbd8yk5P8iaZA2eFQrYVDl0K24Bv7SwaJfrSZEqC-SeJD4Zuwt4U
+				Accept=*/*
+				Content-Type=text/plain; charset=ISO-8859-1
 Cookies:		<none>
 Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-date: Tue, 09 Jul 2024 12:21:39 GMT
-content-type: application/json
-set-cookie: __Host-device_id=AQC80kPwvtad1n8F1B0zD5XjmN7xt7Oq7sg3ZIapgIHtrkadDv4QUDNLHAX9NOFAx91ZN6L9m-Ur08KRQG8ZJGy0mmG6fXAqcUc;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
-set-cookie: sp_tr=false;Version=1;Domain=accounts.spotify.com;Path=/;Secure;SameSite=Lax
-sp-trace-id: 7bef534850b9addb
-x-envoy-upstream-service-time: 23
+Body:
+{
+    "name": "Arunkumar Playlist",
+    "description": "Creating New playlist description",
+    "public": false
+}
+HTTP/1.1 404 Not Found
+date: Tue, 09 Jul 2024 19:27:13 GMT
+content-type: text/html; charset=utf-8
+vary: Accept-Encoding
+set-cookie: __Host-device_id=AQAgRrMJAe8KEWL5XwsWGI5u1K24fngP03bEUqH0yLKu62K8UN8p4f51wb8FyX-u2qHw8T7eP45jLm7QBeFZww9vFm81Or4ae3Y;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
+set-cookie: __Host-sp_csrf_sid=8742b79d9b5ad7ab0b2f6db51e70ec602a5e7074053e0bf9f2674074707ac719; Path=/; HttpOnly; Secure; Expires=2024-07-9 20:27:13.206; Max-Age=3600; SameSite=Lax
+content-security-policy: default-src 'self'; script-src 'self' https://www.google-analytics.com https://ssl.google-analytics.com https://www.google.com https://www.gstatic.com/recaptcha/ https://www.google.com/recaptcha/ https://cdn.cookielaw.org/scripttemplates/ https://*.onetrust.com https://*.googletagmanager.com 'sha256-YqD0Y6nJN+K0Y08J+Ena6eHgZrJ7WcWbIsC/u7GiyVk=' https://accounts.scdn.co; img-src 'self' https://i.imgur.com https://d2mv8tnci56s9d.cloudfront.net https://profile-images.scdn.co https://*.scdn.co https://graph.facebook.com https://fbcdn-profile-a.akamaihd.net https://*.fbcdn.net https://platform-lookaside.fbsbx.com https://www.google.com https://www.google-analytics.com https://stats.g.doubleclick.net https://*.googletagmanager.com data: https://accounts.scdn.co; font-src 'self' data: https://sp-bootstrap.global.ssl.fastly.net https://fonts.gstatic.com https://*.scdn.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/css2; frame-src 'self' https://www.spotify.com https://www.google.com https://app.adjust.com https://itunes.apple.com itms-apps: https://www.google.com/recaptcha/; connect-src 'self' https://*.spotify.com https://www.google-analytics.com https://*.ingest.sentry.io/ https://*.googletagmanager.com;
+x-content-security-policy: default-src 'self'; script-src 'self' https://www.google-analytics.com https://ssl.google-analytics.com https://www.google.com https://www.gstatic.com/recaptcha/ https://www.google.com/recaptcha/ https://cdn.cookielaw.org/scripttemplates/ https://*.onetrust.com https://*.googletagmanager.com 'sha256-YqD0Y6nJN+K0Y08J+Ena6eHgZrJ7WcWbIsC/u7GiyVk=' https://accounts.scdn.co; img-src 'self' https://i.imgur.com https://d2mv8tnci56s9d.cloudfront.net https://profile-images.scdn.co https://*.scdn.co https://graph.facebook.com https://fbcdn-profile-a.akamaihd.net https://*.fbcdn.net https://platform-lookaside.fbsbx.com https://www.google.com https://www.google-analytics.com https://stats.g.doubleclick.net https://*.googletagmanager.com data: https://accounts.scdn.co; font-src 'self' data: https://sp-bootstrap.global.ssl.fastly.net https://fonts.gstatic.com https://*.scdn.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/css2; frame-src 'self' https://www.spotify.com https://www.google.com https://app.adjust.com https://itunes.apple.com itms-apps: https://www.google.com/recaptcha/; connect-src 'self' https://*.spotify.com https://www.google-analytics.com https://*.ingest.sentry.io/ https://*.googletagmanager.com;
+x-csrf-valid: false
+sp-trace-id: dcdf95662c451983
+content-encoding: gzip
+x-envoy-upstream-service-time: 14
 server: envoy
 strict-transport-security: max-age=31536000
 x-content-type-options: nosniff
-content-encoding: gzip
-vary: Accept-Encoding
 Via: HTTP/2 edgeproxy, 1.1 google
 Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
 Transfer-Encoding: chunked
 
-{
-    "access_token": "BQBBSSAHzotMU0TLPwIB5Vg7aEDd-qSQoYSBgKWJUNTiKRxUAgyltIXydNiWIaisEib7ww7bpqnaUlSdOqN5_SzC0fNVZoVSZuEuthHgTT_R1M2wZHs",
-    "token_type": "Bearer",
-    "expires_in": 3600
-}
+<html dir="ltr" id="app" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Error - Spotify - Spotify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <base href="/"/>
+    <link rel="icon" href="https://accounts.scdn.co/sso/images/favicon.ace4d8543bbb017893402a1e9d1ac1fa.ico"/>
+    <script defer="defer" src="https://accounts.scdn.co/sso/js/indexReact.81d44d21e469595a53cb.js" sp-bootstrap="sp-bootstrap"/>
+    <meta id="bootstrap-data" sp-bootstrap-data="{&quot;error&quot;:&quot;server_error&quot;,&quot;error_description&quot;:&quot;An unexpected server error has occurred.&quot;,&quot;BON&quot;:[&quot;0&quot;,&quot;0&quot;,1246382515]}" sp-component="error" sp-translations-data="eyJlcnJvclRpdGxlIjoiRXJyb3IiLCJlcnJvckZvcm1EZWZhdWx0IjoiT29wcyEgU29tZXRoaW5nIHdlbnQgd3JvbmcsIHBsZWFzZSB0cnkgYWdhaW4gb3IgY2hlY2sgb3V0IG91ciA8aGVscExpbms+aGVscCBhcmVhPC9oZWxwTGluaz4ifQ=="/>
+    <style>
+    body {
+      background-color: #121212;
+      margin: 0;
+    }
+    #root {
+      min-height: 100vh;
+    }
+    .loading-indicator-container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loading-indicator-container * {
+      box-sizing: border-box;
+    }
+    .loading-indicator {
+      content: "";
+      width: 56px;
+      inline-size: 56px;
+      block-size: 12.4px;
+      height: 12.4px;
+      overflow-clip-margin: content-box;
+      overflow: hidden;
+    }
+    .loading-indicator circle {
+      fill: white;
+      animation: loading-indicator-kf 1.32s linear infinite;
+      transform-origin: center center;
+      opacity: 0.5;
+    }
+    .loading-indicator circle:nth-of-type(2) {
+      animation-delay: 0.1s;
+    }
+    .loading-indicator circle:nth-of-type(3) {
+      animation-delay: 0.2s;
+    }
+    @keyframes loading-indicator-kf {
+      0% {
+        animation-timing-function: cubic-bezier(1, 0, 0.7, 1);
+        opacity: 0.5;
+        transform: scale(1);
+      }
+      40% {
+        animation-timing-function: cubic-bezier(0.3, 0, 0, 1);
+        opacity: 0.75;
+        transform: scale(1.3);
+      }
+      72.5% {
+        animation-timing-function: linear;
+        opacity: 0.5;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0.5;
+        transform: scale(1);
+      }
+    }
+  </style>
+  </head>
+  <body class="encore-dark-theme encore-layout-themes">
+    <div id="root">
+      <div class="loading-indicator-container">
+        <svg class="loading-indicator" x="0px" y="0px" viewbox="0 0 1 100" space="preserve" role="progressbar" aria-valuetext="Loading">
+          <circle stroke="none" cx="-140" cy="50" r="32"/>
+          <circle stroke="none" cx="0" cy="50" r="32"/>
+          <circle stroke="none" cx="140" cy="50" r="32"/>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
