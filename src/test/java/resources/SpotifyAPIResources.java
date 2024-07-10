@@ -2,10 +2,9 @@ package resources;
 
 public enum SpotifyAPIResources 
 {
-	//Spotifyuserid(resource) = "317gyhsluh6xwyu23hi6clu3yzcu";
 	
 	Token("/api/token"),
-	createplaylistApi("/v1/users/317gyhsluh6xwyu23hi6clu3yzcu/playlists");
+	createplaylistApi("/playlists");
 
 	private String resource;
 	
