@@ -48,8 +48,9 @@ public class Spotify_Utils {
 		if(playlistreq==null) 
 		{
 		PrintStream log =new PrintStream(new FileOutputStream("Spotifylogging.txt"));
-		 playlistreq=new RequestSpecBuilder().setBaseUri(getGlobalValue("SporifybaseUrl"))
+		 playlistreq=new RequestSpecBuilder().setBaseUri(getGlobalValue("Sporifycreateplaylist"))
 				 .addHeader("Authorization", "Bearer "+accessToken)
+				 .addHeader("Content-Type", "application/json")
 				 .setBody(Testdatabuild.playlistbody())
 				 .addFilter(RequestLoggingFilter.logRequestTo(log))
 				 .addFilter(ResponseLoggingFilter.logResponseTo(log)).build();	 

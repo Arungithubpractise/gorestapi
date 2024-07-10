@@ -1,0 +1,380 @@
+Request method:	POST
+Request URI:	https://gorest.co.in/public/v2/users
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292
+				Accept=application/json, application/javascript, text/javascript, text/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 761229698,
+    "name": "iris.white",
+    "email": "billi.schoen@example.com",
+    "gender": "male",
+    "status": "inactive"
+}
+HTTP/1.1 201 Created
+Date: Wed, 10 Jul 2024 05:41:18 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 105
+Connection: keep-alive
+Cache-Control: max-age=0, private, must-revalidate
+etag: W/"7d70a075ba2e9e2a858f9fba2acf9db0"
+location: https://gorest.co.in/public/v2/users/7020990
+referrer-policy: strict-origin-when-cross-origin
+vary: Origin
+x-content-type-options: nosniff
+x-download-options: noopen
+x-frame-options: SAMEORIGIN
+x-permitted-cross-domain-policies: none
+x-ratelimit-limit: 90
+x-ratelimit-remaining: 84
+x-ratelimit-reset: 1
+x-request-id: 1d9a0df7-9fd6-48ee-8ca3-024db5549dd0
+x-runtime: 0.154378
+x-xss-protection: 0
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=bxQbglUQ8gbuxnwoQ5xKntt5wiC6tApW0pvvHxGd%2BZt5UOC0QVagSWB%2BQ1jffAweNhfbjBv36V4d52v2rIj6FGgksre2CjCdIPsFM%2BqXL5xompy3jDhGONg3uujqynk%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 8a0e39563fb37fbd-MAA
+alt-svc: h3=":443"; ma=86400
+
+{
+    "id": 7020990,
+    "name": "iris.white",
+    "email": "billi.schoen@example.com",
+    "gender": "male",
+    "status": "inactive"
+}
+Request method:	GET
+Request URI:	https://gorest.co.in/public/v2/users/?id=7020990
+Proxy:			<none>
+Request params:	<none>
+Query params:	id=7020990
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292
+				Accept=application/json, application/javascript, text/javascript, text/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Wed, 10 Jul 2024 05:41:20 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: max-age=0, private, must-revalidate
+etag: W/"7b3c6328299eccc3ac639d0feb34d262"
+referrer-policy: strict-origin-when-cross-origin
+vary: Origin
+x-content-type-options: nosniff
+x-download-options: noopen
+x-frame-options: SAMEORIGIN
+x-links-current: https://gorest.co.in/public/v2/users?page=1
+x-links-next: 
+x-links-previous: 
+x-pagination-limit: 10
+x-pagination-page: 1
+x-pagination-pages: 1
+x-pagination-total: 1
+x-permitted-cross-domain-policies: none
+x-ratelimit-limit: 90
+x-ratelimit-remaining: 89
+x-ratelimit-reset: 1
+x-request-id: 68afb47a-3087-4659-9d49-9c4de12e2ac6
+x-runtime: 0.241819
+x-xss-protection: 0
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=oJRufC2WHjxayyqkJ8g1jDE5eQnKuLK5GraYmcnSxcz2ZxQIM5CGdkeAm7PB9%2Fod6MlNKqR33%2BGDjVUfYei8x7zkGnTNVtIeo5byxVdtboG1bbtP9ug85ZZmZdXlaGw%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 8a0e395fc8447f73-MAA
+Content-Encoding: gzip
+alt-svc: h3=":443"; ma=86400
+
+[
+    {
+        "id": 7020990,
+        "name": "iris.white",
+        "email": "billi.schoen@example.com",
+        "gender": "male",
+        "status": "inactive"
+    }
+]
+Request method:	GET
+Request URI:	https://gorest.co.in/public/v2/users/?id=7020990
+Proxy:			<none>
+Request params:	<none>
+Query params:	id=7020990
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292
+				Accept=application/json, application/javascript, text/javascript, text/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Wed, 10 Jul 2024 05:41:20 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: max-age=0, private, must-revalidate
+etag: W/"7b3c6328299eccc3ac639d0feb34d262"
+referrer-policy: strict-origin-when-cross-origin
+vary: Origin
+x-content-type-options: nosniff
+x-download-options: noopen
+x-frame-options: SAMEORIGIN
+x-links-current: https://gorest.co.in/public/v2/users?page=1
+x-links-next: 
+x-links-previous: 
+x-pagination-limit: 10
+x-pagination-page: 1
+x-pagination-pages: 1
+x-pagination-total: 1
+x-permitted-cross-domain-policies: none
+x-ratelimit-limit: 90
+x-ratelimit-remaining: 89
+x-ratelimit-reset: 2
+x-request-id: 67dd999f-74a6-4e5f-b90a-4bd44aec9d1b
+x-runtime: 0.136874
+x-xss-protection: 0
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=hokUOyzaG9jtaBelSvKHxQFFVoUJr2Zv21eF%2BFVBlDxPLlA46Jso2hQSgEzG0vGWtW6Y7B%2FSyFsNGtsBCVxbT38xbJT9lcvoLvYTqi%2BZ4v3ACdcMUL%2BVNBgKd11g8xA%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 8a0e3962d8747fa1-MAA
+Content-Encoding: gzip
+alt-svc: h3=":443"; ma=86400
+
+[
+    {
+        "id": 7020990,
+        "name": "iris.white",
+        "email": "billi.schoen@example.com",
+        "gender": "male",
+        "status": "inactive"
+    }
+]
+Request method:	GET
+Request URI:	https://gorest.co.in/public/v2/users/?id=7020990
+Proxy:			<none>
+Request params:	<none>
+Query params:	id=7020990
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292
+				Accept=application/json, application/javascript, text/javascript, text/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "Arun",
+    "email": "user_mail",
+    "status": "active"
+}
+HTTP/1.1 200 OK
+Date: Wed, 10 Jul 2024 05:41:20 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+Connection: keep-alive
+Cache-Control: max-age=0, private, must-revalidate
+etag: W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+referrer-policy: strict-origin-when-cross-origin
+vary: Origin
+x-content-type-options: nosniff
+x-download-options: noopen
+x-frame-options: SAMEORIGIN
+x-pagination-limit: 10
+x-pagination-page: 1
+x-pagination-pages: 0
+x-pagination-total: 0
+x-permitted-cross-domain-policies: none
+x-ratelimit-limit: 90
+x-ratelimit-remaining: 88
+x-ratelimit-reset: 2
+x-request-id: 8744518c-804b-4a00-9b57-0a1cd4357397
+x-runtime: 0.163200
+x-xss-protection: 0
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=2xPAQwAewS%2FJUt3%2Fa3mSJaDWIGLWjSaGj1LOl7mPKVhUtZSeuQowuitIBF7WmuKUc9iugG2WN0rw16y99tZmjgssBFyyUn%2BSZYNkPX9jvZ6y%2F%2Bn3MusaSV2YAoOYb78%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 8a0e39647b5e7fa3-MAA
+alt-svc: h3=":443"; ma=86400
+
+[
+    
+]
+Request method:	GET
+Request URI:	https://gorest.co.in/public/v2/users/?id=7020990
+Proxy:			<none>
+Request params:	<none>
+Query params:	id=7020990
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292
+				Accept=application/json, application/javascript, text/javascript, text/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "Arun",
+    "email": "user_mail",
+    "status": "active"
+}
+HTTP/1.1 200 OK
+Date: Wed, 10 Jul 2024 05:41:21 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+Connection: keep-alive
+Cache-Control: max-age=0, private, must-revalidate
+etag: W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+referrer-policy: strict-origin-when-cross-origin
+vary: Origin
+x-content-type-options: nosniff
+x-download-options: noopen
+x-frame-options: SAMEORIGIN
+x-pagination-limit: 10
+x-pagination-page: 1
+x-pagination-pages: 0
+x-pagination-total: 0
+x-permitted-cross-domain-policies: none
+x-ratelimit-limit: 90
+x-ratelimit-remaining: 87
+x-ratelimit-reset: 3
+x-request-id: 68c6e74d-1672-4b12-9853-fdf3c1a5f432
+x-runtime: 0.188532
+x-xss-protection: 0
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=0LZ1wkv0%2FvT4jdZAkllza7e7tRRbmwHMeISKVWkjPj3CBpAw5On3905IFDFres3%2Bh1D1bGA1D1jCpLU%2Bs6TGX5VqA2URy88VnHUXcyWh%2FAsyEG3Xy%2FuU5WdkNbsS%2FiM%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 8a0e396639ea7fec-MAA
+alt-svc: h3=":443"; ma=86400
+
+[
+    
+]
+Request method:	GET
+Request URI:	https://gorest.co.in/public/v2/users/?id=7020990
+Proxy:			<none>
+Request params:	<none>
+Query params:	id=7020990
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292
+				Accept=application/json, application/javascript, text/javascript, text/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Wed, 10 Jul 2024 05:41:21 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: max-age=0, private, must-revalidate
+etag: W/"7b3c6328299eccc3ac639d0feb34d262"
+referrer-policy: strict-origin-when-cross-origin
+vary: Origin
+x-content-type-options: nosniff
+x-download-options: noopen
+x-frame-options: SAMEORIGIN
+x-links-current: https://gorest.co.in/public/v2/users?page=1
+x-links-next: 
+x-links-previous: 
+x-pagination-limit: 10
+x-pagination-page: 1
+x-pagination-pages: 1
+x-pagination-total: 1
+x-permitted-cross-domain-policies: none
+x-ratelimit-limit: 90
+x-ratelimit-remaining: 86
+x-ratelimit-reset: 4
+x-request-id: 90e077d0-ef60-4ded-bd26-1f28ffb4a0d5
+x-runtime: 0.085113
+x-xss-protection: 0
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=lhwnSd6EabwUsX6QwoXwrDWaBqAPCKPZgQvgb1Cp0vqN73lPgC236DNRIvtVk5jWZTYxec8RIWfQGY8xORMZc%2BqDUsB5VVpIw6fMUBpwMhAiYyT9Qs4QLa%2BiLE3BJCI%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 8a0e39686ee87f9d-MAA
+Content-Encoding: gzip
+alt-svc: h3=":443"; ma=86400
+
+[
+    {
+        "id": 7020990,
+        "name": "iris.white",
+        "email": "billi.schoen@example.com",
+        "gender": "male",
+        "status": "inactive"
+    }
+]
+Request method:	GET
+Request URI:	https://gorest.co.in/public/v2/users/?id=7020990
+Proxy:			<none>
+Request params:	<none>
+Query params:	id=7020990
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer c975dc2ab2462b4583c7f3e54a07a22557899cb772c3480afd1e402c4b82d292
+				Accept=application/json, application/javascript, text/javascript, text/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Wed, 10 Jul 2024 05:41:21 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: max-age=0, private, must-revalidate
+etag: W/"7b3c6328299eccc3ac639d0feb34d262"
+referrer-policy: strict-origin-when-cross-origin
+vary: Origin
+x-content-type-options: nosniff
+x-download-options: noopen
+x-frame-options: SAMEORIGIN
+x-links-current: https://gorest.co.in/public/v2/users?page=1
+x-links-next: 
+x-links-previous: 
+x-pagination-limit: 10
+x-pagination-page: 1
+x-pagination-pages: 1
+x-pagination-total: 1
+x-permitted-cross-domain-policies: none
+x-ratelimit-limit: 90
+x-ratelimit-remaining: 85
+x-ratelimit-reset: 4
+x-request-id: 60a696ac-661e-446b-b107-c66208a94f61
+x-runtime: 0.090674
+x-xss-protection: 0
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=h9mjuef2G7M02P1%2BLPHNv19uzgeqC2YB6N0jzSqsRrWVeireD6YATwNuyPlIAU36cHMToEiYOygKEs8QSwWRO9o8%2FJO2DzZx3CYJJK8pabeVmRcHO1yPutAcx1PluZs%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 8a0e3969fdd8801c-MAA
+Content-Encoding: gzip
+alt-svc: h3=":443"; ma=86400
+
+[
+    {
+        "id": 7020990,
+        "name": "iris.white",
+        "email": "billi.schoen@example.com",
+        "gender": "male",
+        "status": "inactive"
+    }
+]

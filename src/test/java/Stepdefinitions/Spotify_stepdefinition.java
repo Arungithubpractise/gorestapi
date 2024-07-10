@@ -112,8 +112,7 @@ public void create_a_playlist_with_userid() throws IOException
 @When("we use {string}  with {string} http request")
 public void we_use_with_http_request(String resource, String method) throws IOException 
 {
-RequestSpecification res = given().log().all().spec(createplaylist());
-	
+
 	SpotifyAPIResources resourceAPI = SpotifyAPIResources.valueOf(resource);
 	System.out.println(resourceAPI.getResource());
 	
