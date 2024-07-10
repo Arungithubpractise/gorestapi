@@ -7,7 +7,7 @@ Feature: OAuth Generation using Authorization Code
     
     Scenario: create a playlist    
     Given create a playlist with userid
-    When we use "createplaylistApi"  with "post" http request
+    When we use "createplaylistApi"  with "POST" http request
     Then API call got success with status code 201
    
    
