@@ -30,7 +30,7 @@ public class Testdatabuild {
 		String Str = "{\"name\":\"Arun\",\"email\":\"user_mail\",\"status\":\"active\"}";
 		return Str;
 	}
-	
+		
 	
 	public static String playlistbody()
 	{
