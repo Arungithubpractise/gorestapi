@@ -1,0 +1,13 @@
+Request method:	POST
+Request URI:	https://api.thecatapi.com/v1/images/upload
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	file=cat(JPEG).jpeg
+Path params:	<none>
+Headers:		x-api-key=17d94b92-754f-46eb-99a0-65be65b5d18f
+				Accept=*/*
+				Content-Type=multipart/form-data
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
