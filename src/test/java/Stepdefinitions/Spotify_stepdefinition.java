@@ -22,7 +22,9 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 import resources.SpotifyAPIResources;
 import resources.Testdatabuild;
@@ -44,10 +46,10 @@ public class Spotify_stepdefinition extends Spotify_Utils {
 	String clientsecret;
 	String spotifyclientsecret;
 	String authorizationcode;
-	static Response response;
+	public static Response response;
 	RequestSpecification res;
 	String accesstoken;
-	 Response playlistresponse;
+	public static Response playlistresponse;
 	
 	@Given("Hitting a Authorization url in browser with client id and client secret to get authorization code")
 	public void hitting_a_authorization_url_in_browser_with_client_id_and_client_secret_to_get_authorization_code() 
@@ -112,9 +114,7 @@ public void create_a_playlist_with_userid() throws IOException
 @When("we use {string}  with {string} http request")
 public void we_use_with_http_request(String resource, String method) throws IOException 
 {
-
-	SpotifyAPIResources resourceAPI = SpotifyAPIResources.valueOf(resource);
-	System.out.println(resourceAPI.getResource());
+     SpotifyAPIResources resourceAPI = SpotifyAPIResources.valueOf(resource);
 	
 	if (method.equalsIgnoreCase("POST"))
 		playlistresponse = res.when().log().all().post(resourceAPI.getResource());
@@ -127,9 +127,15 @@ public void we_use_with_http_request(String resource, String method) throws IOEx
 }
 
 
+
+
 @Then("API call got success with status code {int}")
 public void api_call_got_success_with_status_code(int no) 
 {
+	
+	String st = Spotify_Utils.getresponsestring(playlistresponse);
+	 System.out.println(st);
+	 
 	assertEquals(playlistresponse.getStatusCode(), no);
 }
 
