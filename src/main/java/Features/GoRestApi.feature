@@ -1,7 +1,6 @@
 Feature: Validating Gorest Api for a user
 
 Scenario Outline: verify if user is successfully created 
-
 Given create a user with "<gender>"  "<status>"
 When user uses "createuserApi"  with "post" http request
 Then the API call got success with status code 201

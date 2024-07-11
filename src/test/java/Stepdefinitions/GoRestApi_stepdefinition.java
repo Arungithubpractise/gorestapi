@@ -1,18 +1,14 @@
 package Stepdefinitions;
 
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
-
-import org.junit.Assert;
-import org.junit.Test;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
@@ -83,16 +79,8 @@ public class GoRestApi_stepdefinition extends GoRestApi_Utils {
 		assertEquals(getresponsestring(response, key),expectedvalue);	
 	}
 
-	/*
-	 * @Then("verify id created to {string} using {string}") public void
-	 * verify_id_created_to_using(String string, String string2) throws IOException
-	 * { id = getresponsestring(response,"id");
-	 * System.out.println("idddddddddddddddd" +id);
-	 * 
-	 * res=given().spec(requestSpecification()).queryParam("id", id); //
-	 * user_uses_with_http_request(resource,"GET"); // String id1 =
-	 * getresponsestring(response,"id"); // assertEquals(actualName,expectedName); }
-	 */
+	
+	 
 
 	@Given("fetch the data created of user with {string}")
 	public void fetch_the_data_created_of_user_with(String getuser) throws IOException {
