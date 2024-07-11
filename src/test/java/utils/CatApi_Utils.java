@@ -15,45 +15,25 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import resources.Testdatabuild;
 
-public class Spotify_Utils {
+public class CatApi_Utils {
 	
 	public static RequestSpecification req;
 	public static RequestSpecification playlistreq;
 	
-	public RequestSpecification SpotifyrequestSpecification() throws IOException
-	{
-		
-		
+	public RequestSpecification uploadImage() throws IOException
+	{	
 		if(req==null)   // it will make shure when 2nd runtest case is running it is not overlapping previous one in looging.txt
 		{
-		PrintStream log =new PrintStream(new FileOutputStream("Spotifylogging.txt"));
-		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("SporifybaseUrl"))		
-				 .addQueryParam("client_id", getGlobalValue("spotifyclientid"))
-				 .addQueryParam("client_secret", getGlobalValue("spotifyclientsecret"))
-				 .addQueryParam("grant_type", "client_credentials")
+		PrintStream log =new PrintStream(new FileOutputStream("CatApilogging.txt"));
+		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("CapApibaseurl"))		
+				 .addHeader("Content-Type", "multipart/form-data")
+				 .addHeader("x-api-key", "17d94b92-754f-46eb-99a0-65be65b5d18f")
+				 .addFormParam("file", "cat(JPEG).jpeg")
 				 .addFilter(RequestLoggingFilter.logRequestTo(log))
 				 .addFilter(ResponseLoggingFilter.logResponseTo(log)).build();	 
 		 return req;
 		}
 		return req;	
-		
-	}
-	
-	public RequestSpecification createplaylist() throws IOException
-	{
-		
-	//	if(playlistreq==null) 
-	//	{
-		PrintStream log =new PrintStream(new FileOutputStream("Spotifylogging.txt"));
-		 playlistreq=new RequestSpecBuilder().setBaseUri(getGlobalValue("Sporifycreateplaylist"))
-				 .addHeader("Authorization", "Bearer "+getaccesstoken(Spotify_stepdefinition.response))
-				 .addHeader("Content-Type", "application/json")
-				 .setBody(Testdatabuild.playlistbody())
-				 .addFilter(RequestLoggingFilter.logRequestTo(log))
-				 .addFilter(ResponseLoggingFilter.logResponseTo(log)).build();	 
-		 return playlistreq;
-		//}
-		//return playlistreq;	
 		
 	}
 		
@@ -81,8 +61,7 @@ public class Spotify_Utils {
 		return js.get().toString();
 	}
 	
-
-	public  static String getaccesstoken(Response response)
+	public  static String getaccesstoken(Response response,String stringname)
 	{
 		
 		System.out.println(response);
@@ -91,10 +70,10 @@ public class Spotify_Utils {
 		  System.out.println("----------" +resp);
 			
 		JsonPath jsonPath = new JsonPath(resp);
-		 String accessToken = jsonPath.getString("access_token");
-		System.out.println(accessToken);
+		 String url = jsonPath.getString("stringname");
+		System.out.println(url);
 		
-		return accessToken;
+		return url;
 	}	
 	
 }
