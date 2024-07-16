@@ -11,8 +11,8 @@ Feature: OAuth Generation using Authorization Code
     Then API call got success with status code 201
    
    
-#    Scenario: Adding Custom Playlist Cover Image 
-#    Given I upload the image to the endpoint "/images" with image id 
-#    When the upload is successful
-#    Then the response status code should be 200
-#    And the response should contain "Image uploaded successfully"
+    Scenario: Adding Custom Playlist Cover Image 
+    Given I upload the image to the endpoint "/images" with image id 
+    When the upload is successful
+    Then the response status code should be 200
+    And the response should contain "Image uploaded successfully"
