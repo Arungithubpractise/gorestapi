@@ -1,13 +1,13 @@
 package resources;
 
-public enum catAPIResources 
+public enum petstoreAPIResources 
 {
-	
+	createPetApi("/v2/pet"),
 	upload("/v1/images/upload");
 	
 	private String resource;
 	
-	catAPIResources(String resource)
+	petstoreAPIResources(String resource)
 	{
 		this.resource=resource;
 	}

@@ -1,39 +1,56 @@
 package utils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Properties;
 
-import Stepdefinitions.Spotify_stepdefinition;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import resources.Testdatabuild;
 
-public class CatApi_Utils {
+public class petstoreAPI_Utils {
 	
-	public static RequestSpecification req;
+	public static RequestSpecification createpetreq;
+	public static RequestSpecification imageuploadreq;
 	public static RequestSpecification playlistreq;
+	
+	
+	public RequestSpecification createapet() throws IOException
+	{	
+		if(createpetreq==null)   // it will make shure when 2nd runtest case is running it is not overlapping previous one in looging.txt
+		{
+		PrintStream log =new PrintStream(new FileOutputStream("CatApilogging.txt"));
+		createpetreq=new RequestSpecBuilder().setBaseUri(getGlobalValue("petstoreBaseuri"))		
+				 .addHeader("Content-Type", "application/json")
+				 .addHeader("accept", "application/json")
+				 .addFilter(RequestLoggingFilter.logRequestTo(log))
+				 .addFilter(ResponseLoggingFilter.logResponseTo(log)).build();	 
+		 return createpetreq;
+		}
+		return createpetreq;	
+		
+	}
 	
 	public RequestSpecification uploadImage() throws IOException
 	{	
-		if(req==null)   // it will make shure when 2nd runtest case is running it is not overlapping previous one in looging.txt
+		if(imageuploadreq==null)   // it will make shure when 2nd runtest case is running it is not overlapping previous one in looging.txt
 		{
-		PrintStream log =new PrintStream(new FileOutputStream("CatApilogging.txt"));
-		 req=new RequestSpecBuilder().setBaseUri(getGlobalValue("CapApibaseurl"))		
+		PrintStream log =new PrintStream(new FileOutputStream("CatApilogging.txt"));			
+		imageuploadreq=new RequestSpecBuilder().setBaseUri(getGlobalValue("petstoreBaseuri"))		
 				 .addHeader("Content-Type", "multipart/form-data")
-				 .addHeader("x-api-key", "17d94b92-754f-46eb-99a0-65be65b5d18f")
-				 .addFormParam("file", "cat(JPEG).jpeg")
+				 .addFormParam("additionalMetadata", "Test")
+				 .addMultiPart("file", new File("C:\\Users\\admin\\eclipse-workspace\\Restassured\\cat(JPEG).jpeg"),  "image/png")
 				 .addFilter(RequestLoggingFilter.logRequestTo(log))
-				 .addFilter(ResponseLoggingFilter.logResponseTo(log)).build();	 
-		 return req;
+				 .addFilter(ResponseLoggingFilter.logResponseTo(log)).build();		 
+		 return imageuploadreq;
 		}
-		return req;	
+		return imageuploadreq;	
 		
 	}
 		

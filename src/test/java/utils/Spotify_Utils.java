@@ -19,6 +19,7 @@ public class Spotify_Utils {
 	
 	public static RequestSpecification req;
 	public static RequestSpecification playlistreq;
+	static String accessToken;
 	
 	public RequestSpecification SpotifyrequestSpecification() throws IOException
 	{
@@ -42,18 +43,18 @@ public class Spotify_Utils {
 	public RequestSpecification createplaylist() throws IOException
 	{
 		
-	//	if(playlistreq==null) 
-	//	{
+	if(playlistreq==null) 
+		{
 		PrintStream log =new PrintStream(new FileOutputStream("Spotifylogging.txt"));
 		 playlistreq=new RequestSpecBuilder().setBaseUri(getGlobalValue("Sporifycreateplaylist"))
-				 .addHeader("Authorization", "Bearer "+getaccesstoken(Spotify_stepdefinition.response))
+				 .addHeader("Authorization", "Bearer "+accessToken)
 				 .addHeader("Content-Type", "application/json")
 				 .setBody(Testdatabuild.playlistbody())
 				 .addFilter(RequestLoggingFilter.logRequestTo(log))
 				 .addFilter(ResponseLoggingFilter.logResponseTo(log)).build();	 
 		 return playlistreq;
-		//}
-		//return playlistreq;	
+		}
+		return playlistreq;	
 		
 	}
 		
@@ -91,7 +92,7 @@ public class Spotify_Utils {
 		  System.out.println("----------" +resp);
 			
 		JsonPath jsonPath = new JsonPath(resp);
-		 String accessToken = jsonPath.getString("access_token");
+		  accessToken = jsonPath.getString("access_token");
 		System.out.println(accessToken);
 		
 		return accessToken;
