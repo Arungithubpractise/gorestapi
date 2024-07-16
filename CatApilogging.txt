@@ -1,13 +1,41 @@
 Request method:	POST
-Request URI:	https://api.thecatapi.com/v1/images/upload
+Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
-Form params:	file=cat(JPEG).jpeg
+Form params:	<none>
 Path params:	<none>
-Headers:		x-api-key=17d94b92-754f-46eb-99a0-65be65b5d18f
-				Accept=*/*
-				Content-Type=multipart/form-data
+Headers:		accept=application/json
+				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
-Body:			<none>
+Body:
+{"id":0,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}'
+HTTP/1.1 200 OK
+Date: Tue, 16 Jul 2024 12:21:49 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 9223372036854655224,
+    "category": {
+        "id": 0,
+        "name": "string"
+    },
+    "name": "doggie",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 0,
+            "name": "string"
+        }
+    ],
+    "status": "available"
+}
