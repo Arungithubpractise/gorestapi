@@ -3,8 +3,8 @@ package resources;
 public enum petstoreAPIResources 
 {
 	createPetApi("/v2/pet"),
-	upload("/v1/images/upload");
-	
+	uploadImage("/v2/pet/{id}/uploadImage");
+
 	private String resource;
 	
 	petstoreAPIResources(String resource)
@@ -16,7 +16,5 @@ public enum petstoreAPIResources
 	{
 		return resource;
 	}
-	
-	
 
 }

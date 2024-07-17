@@ -1,18 +1,21 @@
 Request method:	POST
-Request URI:	https://petstore.swagger.io/v2/pet
+Request URI:	https://petstore.swagger.io/v2/pet/9222968140497181126/uploadImage
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
-Form params:	<none>
-Path params:	<none>
-Headers:		accept=application/json
-				Content-Type=application/json
+Form params:	additionalMetadata=Test
+Path params:	id=9222968140497181126
+Headers:		Accept=*/*
+				Content-Type=multipart/form-data
 Cookies:		<none>
-Multiparts:		<none>
-Body:
-{"id":0,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}'
+Multiparts:		------------
+				Content-Disposition: form-data; name = file; filename = cat(JPEG).jpeg
+				Content-Type: image/png
+
+				C:\Users\admin\eclipse-workspace\Restassured\cat(JPEG).jpeg
+Body:			<none>
 HTTP/1.1 200 OK
-Date: Tue, 16 Jul 2024 12:21:49 GMT
+Date: Wed, 17 Jul 2024 12:29:15 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -22,20 +25,7 @@ Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 Server: Jetty(9.2.9.v20150224)
 
 {
-    "id": 9223372036854655224,
-    "category": {
-        "id": 0,
-        "name": "string"
-    },
-    "name": "doggie",
-    "photoUrls": [
-        "string"
-    ],
-    "tags": [
-        {
-            "id": 0,
-            "name": "string"
-        }
-    ],
-    "status": "available"
+    "code": 200,
+    "type": "unknown",
+    "message": "additionalMetadata: Test\nFile uploaded to ./cat(JPEG).jpeg, 11511 bytes"
 }

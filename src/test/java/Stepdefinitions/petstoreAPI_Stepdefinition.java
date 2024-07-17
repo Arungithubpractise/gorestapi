@@ -20,7 +20,7 @@ public class petstoreAPI_Stepdefinition extends petstoreAPI_Utils{
 	
 	 File file;
 	 RequestSpecification  res;
-	 public static Response createuserresponse;
+	 public static Response createpetresponse;
 	 public static Response imageuploadresponse;
 	
 	 
@@ -31,7 +31,8 @@ public class petstoreAPI_Stepdefinition extends petstoreAPI_Utils{
 	 }
 
 	 @When("we will use {string}  with {string} http request")
-	 public void we_will_use_with_http_request(String resource, String method) {
+	 public void we_will_use_with_http_request(String resource, String method) 
+	 {
 		 petstoreAPIResources resourceAPI = petstoreAPIResources.valueOf(resource);
 			System.out.println(resourceAPI.getResource());
 
@@ -40,18 +41,21 @@ public class petstoreAPI_Stepdefinition extends petstoreAPI_Utils{
 			System.out.println(method);
 
 			if (method.equalsIgnoreCase("POST"))
-				createuserresponse = res.when().log().all().post(resourceAPI.getResource());
+				createpetresponse = res.when().log().all().post(resourceAPI.getResource());
 			else if (method.equalsIgnoreCase("GET"))
-				createuserresponse = res.when().log().all().get(resourceAPI.getResource());
+				createpetresponse = res.when().log().all().get(resourceAPI.getResource());
 			else if (method.equalsIgnoreCase("PUT"))
-				createuserresponse = res.when().log().all().get(resourceAPI.getResource());
+				createpetresponse = res.when().log().all().get(resourceAPI.getResource());
 			else if (method.equalsIgnoreCase("DELETE"))
-				createuserresponse = res.when().log().all().get(resourceAPI.getResource());
+				createpetresponse = res.when().log().all().get(resourceAPI.getResource());
+			
+			System.out.println("Response for createpet" +petstoreAPI_Utils.getresponsestring(createpetresponse));
 	 }
 
 	 @Then("the API call should get success with status code {int}")
-	 public void the_api_call_should_get_success_with_status_code(int no) {
-		 assertEquals(createuserresponse.getStatusCode(), no);
+	 public void the_api_call_should_get_success_with_status_code(int no)
+	 {
+		 assertEquals(createpetresponse.getStatusCode(), no);
 	 }
 
 	 
@@ -65,44 +69,33 @@ public class petstoreAPI_Stepdefinition extends petstoreAPI_Utils{
 	@When("I {string} the JPEG file with http {string} method")
 	public void i_the_jpeg_file_with_http_method(String resource, String method) throws IOException 
 	{
-		 res = given().log().all().spec(uploadImage()).urlEncodingEnabled(false);
-			
+		 res = given().log().all().spec(uploadImage().pathParam("id", petstoreAPI_Utils.getid(createpetresponse)).urlEncodingEnabled(false));
+					 
 	     petstoreAPIResources resourceAPI = petstoreAPIResources.valueOf(resource);
 			System.out.println(resourceAPI.getResource());
 			
 			if (method.equalsIgnoreCase("POST"))
 				imageuploadresponse = res.when().log().all().post(resourceAPI.getResource());
+			
 			else if (method.equalsIgnoreCase("GET"))
 				imageuploadresponse = res.when().log().all().get(resourceAPI.getResource());
 			else if (method.equalsIgnoreCase("PUT"))
 				imageuploadresponse = res.when().log().all().get(resourceAPI.getResource());
 			else if (method.equalsIgnoreCase("DELETE"))
 				imageuploadresponse = res.when().log().all().get(resourceAPI.getResource());
+			
+			System.out.println("Response for uploadimage" +petstoreAPI_Utils.getresponsestring(imageuploadresponse));
+			
+		
 	}
 	
-
-	@Then("the upload should be successful")
-	public void the_upload_should_be_successful() 
-	{
-		assertEquals(response.statusLine(), "Created");
-	}
-
 	@Then("the response status code should be {int}")
 	public void the_response_status_code_should_be(int no) 
 	{
-		assertEquals(response.statusCode(), no);
+		assertEquals(imageuploadresponse.statusCode(), no);
 	}
 
 
-	@Then("the response should contain the file URL")
-	public void the_response_should_contain_the_file_url() 
-	{
-		
-		response.then().body("Url", notNullValue());
-		
-		
-
-}
 }
 
 
