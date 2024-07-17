@@ -13,12 +13,15 @@ import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import resources.petstoreAPIResources;
 
 public class petstoreAPI_Utils {
 	
 	public static RequestSpecification createpetreq;
 	public static RequestSpecification imageuploadreq;
 	public static RequestSpecification playlistreq;
+	
+	public static String id;
 	
 	
 	public RequestSpecification createapet() throws IOException
@@ -46,8 +49,10 @@ public class petstoreAPI_Utils {
 				 .addHeader("Content-Type", "multipart/form-data")
 				 .addFormParam("additionalMetadata", "Test")
 				 .addMultiPart("file", new File("C:\\Users\\admin\\eclipse-workspace\\Restassured\\cat(JPEG).jpeg"),  "image/png")
+				
 				 .addFilter(RequestLoggingFilter.logRequestTo(log))
-				 .addFilter(ResponseLoggingFilter.logResponseTo(log)).build();		 
+				 .addFilter(ResponseLoggingFilter.logResponseTo(log)).build();		
+		 
 		 return imageuploadreq;
 		}
 		return imageuploadreq;	
@@ -78,7 +83,7 @@ public class petstoreAPI_Utils {
 		return js.get().toString();
 	}
 	
-	public  static String getaccesstoken(Response response,String stringname)
+	public  static String getid(Response response)
 	{
 		
 		System.out.println(response);
@@ -86,11 +91,11 @@ public class petstoreAPI_Utils {
 		  
 		  System.out.println("----------" +resp);
 			
-		JsonPath jsonPath = new JsonPath(resp);
-		 String url = jsonPath.getString("stringname");
-		System.out.println(url);
-		
-		return url;
+		  JsonPath jsonPath = new JsonPath(resp);
+			  id = jsonPath.getString("id");
+			System.out.println(id);
+				
+		return id;
 	}	
 	
 }
