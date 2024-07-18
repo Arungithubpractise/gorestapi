@@ -88,7 +88,7 @@ public void i_request_an_access_token_using_the_authorization_with_http_request(
 	else if (method.equalsIgnoreCase("DELETE"))
 		response = res.when().log().all().get(resourceAPI.getResource());
 	
-	System.out.println("Response for accesstoken generation" +Spotify_Utils.getresponsestring(response));
+	System.out.println("Response:" +Spotify_Utils.getresponsestring(response));
 }
 
 @Then("I should receive a valid access token")

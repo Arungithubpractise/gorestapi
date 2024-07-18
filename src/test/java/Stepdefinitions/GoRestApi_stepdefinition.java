@@ -64,7 +64,7 @@ public class GoRestApi_stepdefinition extends GoRestApi_Utils {
 		else if (method.equalsIgnoreCase("DELETE"))
 			response = res.when().log().all().get(resourceAPI.getResource());
 		
-		System.out.println("Response for user created" +GoRestApi_Utils.getresstring(response));
+		System.out.println("Response:" +GoRestApi_Utils.getresstring(response));
 
 	}
 

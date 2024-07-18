@@ -9,11 +9,26 @@ import java.io.IOException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import resources.Testdatabuild;
 import resources.petstoreAPIResources;
 import utils.petstoreAPI_Utils;
+
+
+
+@Epic("Validating Gorest Api for a user")
+@Feature("Login Page Tests")
+
+@Severity(SeverityLevel.NORMAL)
+
+
+@Story("Title of Login Page")
 
 public class petstoreAPI_Stepdefinition extends petstoreAPI_Utils{
 	
@@ -48,7 +63,7 @@ public class petstoreAPI_Stepdefinition extends petstoreAPI_Utils{
 			else if (method.equalsIgnoreCase("DELETE"))
 				createpetresponse = res.when().log().all().get(resourceAPI.getResource());
 			
-			System.out.println("Response for createpet" +petstoreAPI_Utils.getresponsestring(createpetresponse));
+			System.out.println("Response:" +petstoreAPI_Utils.getresponsestring(createpetresponse));
 	 }
 
 	 @Then("the API call should get success with status code {int}")

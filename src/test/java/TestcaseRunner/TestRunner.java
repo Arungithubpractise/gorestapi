@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features = "src/main/java/Features",
                  glue = { "Stepdefinitions" }, 
                  publish = true, 
-                 plugin = { "pretty","html:target/CucumberReports/CucumberReport.html" })
+                 plugin = { "pretty" ,  })
 
 public class TestRunner {
 //tags= {"@DeletePlace"}  compile test verify

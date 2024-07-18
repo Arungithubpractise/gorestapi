@@ -1,3 +1,4 @@
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -10,24 +11,43 @@
   <name>GorestAPI</name>
   <url>http://maven.apache.org</url>
 
-
 <properties>
-   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-   <selenium.version>3.141.59</selenium.version>
-   <junit.version>4.13.2</junit.version>
-   <allure.junit4.version>2.14.0</allure.junit4.version>
-   <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
-   <maven.compiler.source>11</maven.compiler.source>
-   <maven.compiler.target>11</maven.compiler.target>
-   <aspectj.version>1.9.6</aspectj.version>
-   <maven-surefire-plugin-version>3.0.0-M5</maven-surefire-plugin-version>
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+     <allure.version>2.25.0</allure.version>
+     <aspectj.version>1.9.21</aspectj.version>
  </properties>
 
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-bom</artifactId>
+            <version>${allure.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
 
 
   <dependencies>
 	
-	
+	<dependency>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-junit4</artifactId>
+        <scope>test</scope>
+    </dependency>
+  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+     
+  
     <!-- Other dependencies -->
     <dependency>
         <groupId>org.hamcrest</groupId>
@@ -35,27 +55,7 @@
         <version>2.2</version>
         <scope>test</scope>
     </dependency>
-    
-   <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>${selenium.version}</version>
-    </dependency>
      
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
-    </dependency>
-     
-     <dependency>
-        <groupId>io.qameta.allure</groupId>
-        <artifactId>allure-junit4</artifactId>
-        <version>${allure.junit4.version}</version>
-        <scope>test</scope>
-    </dependency>    
-	  
 	  <dependency>
     <groupId>io.rest-assured</groupId>
     <artifactId>rest-assured</artifactId>
@@ -104,6 +104,22 @@
 	    <artifactId>selenium-java</artifactId>
 	    <version>4.16.1</version>
 	</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-plugin -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-plugin</artifactId>
+    <version>7.18.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-maven</artifactId>
+    <version>2.12.0</version>
+</dependency>
+
+
    
   </dependencies>
   
@@ -112,42 +128,39 @@
        <plugins>
    <!-- Compiler plug-in -->
    
-           <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.plugin.version}</version>
-                <configuration>
-                    <source>${maven.compiler.source}</source> <!--For JAVA 8 use 1.8-->
-                    <target>${maven.compiler.target}</target> <!--For JAVA 8 use 1.8-->
-                </configuration>
-            </plugin>
-             
-     <!-- Added Surefire Plugin configuration to execute tests -->       
           <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>${maven-surefire-plugin-version}</version>
-            <configuration>
-                <testFailureIgnore>false</testFailureIgnore>
-                <argLine>
-                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                </argLine>
-                <properties>
-                    <property>
-                        <name>listener</name>
-                        <value>io.qameta.allure.junit4.AllureJunit4</value>
-                    </property>
-                </properties>
-            </configuration>
-            <dependencies>
-                <dependency>
-                    <groupId>org.aspectj</groupId>
-                    <artifactId>aspectjweaver</artifactId>
-                    <version>${aspectj.version}</version>
-                </dependency>
-            </dependencies>
-        </plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.2.3</version>
+    <configuration>
+        <testFailureIgnore>false</testFailureIgnore>
+        <argLine>
+            -Dfile.encoding=${project.build.sourceEncoding}
+            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+        </argLine>
+        <properties>
+            <property>
+                <name>listener</name>
+                <value>io.qameta.allure.junit4.AllureJunit4</value>
+            </property>
+        </properties>
+    </configuration>
+    <dependencies>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-junit4-aspect</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</plugin>
+        
       </plugins>
+      
   </build>
   
 </project>
