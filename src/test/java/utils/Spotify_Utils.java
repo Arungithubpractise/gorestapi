@@ -6,14 +6,12 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Properties;
 
-import Stepdefinitions.Spotify_stepdefinition;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import resources.Testdatabuild;
 
 public class Spotify_Utils {
 	
@@ -40,7 +38,7 @@ public class Spotify_Utils {
 		
 	}
 	
-	public RequestSpecification createplaylist() throws IOException
+	/*public RequestSpecification createplaylist() throws IOException
 	{
 		
 	if(playlistreq==null) 
@@ -56,7 +54,7 @@ public class Spotify_Utils {
 		}
 		return playlistreq;	
 		
-	}
+	}*/
 		
 	
 	public  String getGlobalValue(String key) throws IOException

@@ -1,0 +1,35 @@
+Request method:	POST
+Request URI:	https://accounts.spotify.com/api/token?client_id=9393418e0d1e4ccdae4c92875eb5b438&client_secret=e6b36ae0b7ea4e40bb75156076ada1ba&grant_type=client_credentials
+Proxy:			<none>
+Request params:	<none>
+Query params:	client_id=9393418e0d1e4ccdae4c92875eb5b438
+				client_secret=e6b36ae0b7ea4e40bb75156076ada1ba
+				grant_type=client_credentials
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+date: Wed, 17 Jul 2024 17:49:09 GMT
+content-type: application/json
+set-cookie: __Host-device_id=AQCLDFuSUge3wmdehp3irwWxSlmGvSiAxIqnIfVnyJ9qNw-MsprrC3teVmOCOBljvSbF4fJelyqXSIXhOBvZoNflvjL8r7P5vNI;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
+set-cookie: sp_tr=false;Version=1;Domain=accounts.spotify.com;Path=/;Secure;SameSite=Lax
+sp-trace-id: fcc1a92a5d6a492c
+x-envoy-upstream-service-time: 7
+server: envoy
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+content-encoding: gzip
+vary: Accept-Encoding
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "access_token": "BQBWZ7hzR7GpVG04DOY2iWhyNcmNzLrhg2LWN8gGqEJGzwJs1P3i7p1FpxmKyPNEfEU-h7mTW0gEb9QOJTXxEMLyaqTeVyDbJI1YAr0o4QAyLFgwH4s",
+    "token_type": "Bearer",
+    "expires_in": 3600
+}

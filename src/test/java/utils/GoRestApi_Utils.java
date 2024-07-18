@@ -61,7 +61,18 @@ public class GoRestApi_Utils {
 		return js.get(key).toString();
 	}
 	
-	
+	public static  String getresstring(Response response)
+	{
+		
+		System.out.println("----------" +response);
+		
+		  String resp=response.asString();
+		  
+		  System.out.println("----------" +resp);
+		  
+		JsonPath   js = new JsonPath(resp);
+		return js.get().toString();
+	}
 	
 	public  String getid(Response response)
 	{

@@ -1,13 +1,10 @@
 package Stepdefinitions;
 
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.assertEquals;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.IOException;
-
-import static org.junit.Assert.*;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,12 +19,9 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 import resources.SpotifyAPIResources;
-import resources.Testdatabuild;
 import utils.Spotify_Utils;
 
 
@@ -93,6 +87,8 @@ public void i_request_an_access_token_using_the_authorization_with_http_request(
 		response = res.when().log().all().get(resourceAPI.getResource());
 	else if (method.equalsIgnoreCase("DELETE"))
 		response = res.when().log().all().get(resourceAPI.getResource());
+	
+	System.out.println("Response for accesstoken generation" +Spotify_Utils.getresponsestring(response));
 }
 
 @Then("I should receive a valid access token")
