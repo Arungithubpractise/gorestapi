@@ -1,10 +1,5 @@
 package Stepdefinitions;
 
-import java.io.IOException;
-
-import io.cucumber.java.Before;
-import pojo.user;
-
 public class Hooks {
 	
 	//@Before("@DeletePlace")

@@ -13,7 +13,6 @@ import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import resources.petstoreAPIResources;
 
 public class petstoreAPI_Utils {
 	
@@ -28,7 +27,7 @@ public class petstoreAPI_Utils {
 	{	
 		if(createpetreq==null)   // it will make shure when 2nd runtest case is running it is not overlapping previous one in looging.txt
 		{
-		PrintStream log =new PrintStream(new FileOutputStream("CatApilogging.txt"));
+		PrintStream log =new PrintStream(new FileOutputStream("petstoreAPIlogging.txt"));
 		createpetreq=new RequestSpecBuilder().setBaseUri(getGlobalValue("petstoreBaseuri"))		
 				 .addHeader("Content-Type", "application/json")
 				 .addHeader("accept", "application/json")
@@ -44,12 +43,11 @@ public class petstoreAPI_Utils {
 	{	
 		if(imageuploadreq==null)   // it will make shure when 2nd runtest case is running it is not overlapping previous one in looging.txt
 		{
-		PrintStream log =new PrintStream(new FileOutputStream("CatApilogging.txt"));			
+		PrintStream log =new PrintStream(new FileOutputStream("petstoreAPIlogging.txt"));			
 		imageuploadreq=new RequestSpecBuilder().setBaseUri(getGlobalValue("petstoreBaseuri"))		
 				 .addHeader("Content-Type", "multipart/form-data")
 				 .addFormParam("additionalMetadata", "Test")
-				 .addMultiPart("file", new File("C:\\Users\\admin\\eclipse-workspace\\Restassured\\cat(JPEG).jpeg"),  "image/png")
-				
+				 .addMultiPart("file", new File("./cat(JPEG).jpeg"),  "image/png")				
 				 .addFilter(RequestLoggingFilter.logRequestTo(log))
 				 .addFilter(ResponseLoggingFilter.logResponseTo(log)).build();		
 		 
