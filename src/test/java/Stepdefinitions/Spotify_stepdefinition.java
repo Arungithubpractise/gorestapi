@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.IOException;
 
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -45,6 +46,7 @@ public class Spotify_stepdefinition extends Spotify_Utils {
 	String accesstoken;
 	public static Response playlistresponse;
 	
+	@Test
 	@Given("Hitting a Authorization url in browser with client id and client secret to get authorization code")
 	public void hitting_a_authorization_url_in_browser_with_client_id_and_client_secret_to_get_authorization_code() 
 	{
@@ -88,7 +90,7 @@ public void i_request_an_access_token_using_the_authorization_with_http_request(
 	else if (method.equalsIgnoreCase("DELETE"))
 		response = res.when().log().all().get(resourceAPI.getResource());
 	
-	System.out.println("Response for accesstoken generation" +Spotify_Utils.getresponsestring(response));
+	System.out.println("Response:" +Spotify_Utils.getresponsestring(response));
 }
 
 @Then("I should receive a valid access token")

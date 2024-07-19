@@ -5,6 +5,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 
+import org.junit.Test;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -39,6 +41,7 @@ public class GoRestApi_stepdefinition extends GoRestApi_Utils {
 	static Response response;
 	static String id;
 
+	@Test
 	@Given("create a user with {string}  {string}")
 	public void create_a_user_with(String gender , String status) throws IOException {
 	    
@@ -64,7 +67,7 @@ public class GoRestApi_stepdefinition extends GoRestApi_Utils {
 		else if (method.equalsIgnoreCase("DELETE"))
 			response = res.when().log().all().get(resourceAPI.getResource());
 		
-		System.out.println("Response for user created" +GoRestApi_Utils.getresstring(response));
+		System.out.println("Response:" +GoRestApi_Utils.getresstring(response));
 
 	}
 
@@ -83,7 +86,7 @@ public class GoRestApi_stepdefinition extends GoRestApi_Utils {
 
 	
 	 
-
+	@Test
 	@Given("fetch the data created of user with {string}")
 	public void fetch_the_data_created_of_user_with(String getuser) throws IOException {
 
@@ -96,6 +99,7 @@ public class GoRestApi_stepdefinition extends GoRestApi_Utils {
 
 	}
 	
+	@Test
 	@Given("UpdateUser with {string}")
 	public void update_user_with(String updateuser) throws IOException 
 	{
@@ -103,6 +107,7 @@ public class GoRestApi_stepdefinition extends GoRestApi_Utils {
 		user_uses_with_http_request(updateuser, "PUT");
 	}
 
+	@Test
 	@Given("Delete the user with {string}")
 	public void delete_the_user_with(String deleteuser) throws IOException {
 

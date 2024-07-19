@@ -1,4 +1,4 @@
-Feature: create a pet and upload an image for a created pet 
+	Feature: create a pet and upload an image for a created pet 
    
 Scenario: verify if pet is successfully created 
    Given create a pet
