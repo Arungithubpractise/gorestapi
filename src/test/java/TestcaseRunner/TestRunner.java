@@ -12,5 +12,5 @@ import io.cucumber.junit.CucumberOptions;
                  plugin = { "pretty" , "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" })
 
 public class TestRunner {
-//tags= {"@DeletePlace"}  compile test verify
+
 }
