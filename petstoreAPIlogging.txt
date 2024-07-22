@@ -1,10 +1,10 @@
 Request method:	POST
-Request URI:	https://petstore.swagger.io/v2/pet/9223372036854775734/uploadImage
+Request URI:	https://petstore.swagger.io/v2/pet/9223372036854775807/uploadImage
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	additionalMetadata=Test
-Path params:	id=9223372036854775734
+Path params:	id=9223372036854775807
 Headers:		Accept=*/*
 				Content-Type=multipart/form-data
 Cookies:		<none>
@@ -15,7 +15,7 @@ Multiparts:		------------
 				.\cat(JPEG).jpeg
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Fri, 19 Jul 2024 10:10:53 GMT
+Date: Mon, 22 Jul 2024 06:59:00 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
