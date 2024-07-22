@@ -13,12 +13,12 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-date: Mon, 22 Jul 2024 06:59:21 GMT
+date: Mon, 22 Jul 2024 07:02:49 GMT
 content-type: application/json
-set-cookie: __Host-device_id=AQDDpE1rgUsih5agEMWtYAtWpbWhMGiyYX5ietZ7zBWzcmCsbmogLHrrnHDbGqnrZUokA7Qja4UcJZvV4FTFywOgf1f7P7zWZi0;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
+set-cookie: __Host-device_id=AQCltHypbmb_touCeRvCJc5K6J5K41ONhYtA0tQf8e8FGEcz62InGSN5QrEDfi46fUHeSHFTQCuF9fROk0f3ixTKpjX0J7wytPc;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
 set-cookie: sp_tr=false;Version=1;Domain=accounts.spotify.com;Path=/;Secure;SameSite=Lax
-sp-trace-id: 9a2b896a273b608e
-x-envoy-upstream-service-time: 11
+sp-trace-id: 74938ff0ab70251d
+x-envoy-upstream-service-time: 8
 server: envoy
 strict-transport-security: max-age=31536000
 x-content-type-options: nosniff
@@ -29,7 +29,7 @@ Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
 Transfer-Encoding: chunked
 
 {
-    "access_token": "BQAlk1AxaMWnGe3vxC4rHT67zywK2yPFYgu0T562HZI6qdRSEDw-289Vea4OHSxWqy2E8cwNLx34AT_Mut91utWU17UFRuO9Eu8Tv2UbCkv7KeeUm_0",
+    "access_token": "BQAWZciDSJufY1YeKU0WM55GaMvN5UpEiy3LRYeC5wcMdHyC8LpJr9dts-5MNXcJO5Ehy3JfvG58-Rn7wA_MSmEqYeAf3SfWVNfjqLSg-porzvSJ814",
     "token_type": "Bearer",
     "expires_in": 3600
 }
