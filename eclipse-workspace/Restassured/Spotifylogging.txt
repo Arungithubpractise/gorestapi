@@ -1,0 +1,36 @@
+Request method:	POST
+Request URI:	https://accounts.spotify.com/api/token?client_id=9393418e0d1e4ccdae4c92875eb5b438&client_secret=e6b36ae0b7ea4e40bb75156076ada1ba&grant_type=client_credentials
+Proxy:			<none>
+Request params:	<none>
+Query params:	client_id=9393418e0d1e4ccdae4c92875eb5b438
+				client_secret=e6b36ae0b7ea4e40bb75156076ada1ba
+				grant_type=client_credentials
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/x-www-form-urlencoded; charset=ISO-8859-1
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+date: Fri, 30 Aug 2024 20:17:32 GMT
+content-type: application/json
+x-request-id: 86e94acb-aeb7-4444-9916-c49a98efcbed
+set-cookie: __Host-device_id=AQDKI_usVutwEEy8pYETaCSaTR1phG7-zA30LqcrykXONmU6A-55H7SLL0gzFK_5bA1zj-XR1mL94JR4wMLbb2R4KrPHlNs6mq4;Version=1;Path=/;Max-Age=2147483647;Secure;HttpOnly;SameSite=Lax
+set-cookie: sp_tr=false;Version=1;Domain=accounts.spotify.com;Path=/;Secure;SameSite=Lax
+sp-trace-id: ad2428e4ce6f561f
+x-envoy-upstream-service-time: 9
+server: envoy
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+content-encoding: gzip
+vary: Accept-Encoding
+Via: HTTP/2 edgeproxy, 1.1 google
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+    "access_token": "BQBMx87gE7S82T2PPo5KIFxU2CK_ClCDcABO5ccf2Iz7ZpqilNngWJIwQitT7rirAIfl8ddLOnOPkCxALuRWN7WJ9xgYx15wgfbeaQi7x6VrOFM5D80",
+    "token_type": "Bearer",
+    "expires_in": 3600
+}
